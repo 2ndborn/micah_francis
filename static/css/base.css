@@ -1,6 +1,5 @@
 header {
-    background: linear-gradient(to right, #000028 20%, #ffffff 70%);
-    border-bottom: #000028 solid 1px;
+    background: linear-gradient(to right, #000028 20%, rgba(255, 255, 255, 0) 70%);
 }
 
 body {
@@ -15,6 +14,7 @@ body {
 }
 
 .title-link {
+    width: fit-content;
     font-family: "Permanent Marker", cursive;
     font-weight: 100;
     font-style: normal;
@@ -28,4 +28,22 @@ body {
 
 .text-dark-blue {
     color: #000028;
+}
+
+/*************Footer***************************/
+
+footer {
+    background-color: #000028;
+}
+
+.footer-content {
+    list-style-type: none;
+}
+.social-icons {
+    font-size: xx-large;
+}
+
+.sign-in {
+    text-align: right;
+    color: ;
 }
