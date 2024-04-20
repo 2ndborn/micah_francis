@@ -1,5 +1,9 @@
+html {
+    height: 100%;
+}
+
 header {
-    background: linear-gradient(to right, #000028 20%, rgba(255, 255, 255, 0) 70%);
+    background: linear-gradient(to right, #000088 20%, rgba(255, 255, 255, 0) 70%);
 }
 
 body {
@@ -21,13 +25,25 @@ body {
 }
 
 .nav-area {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 100;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .text-dark-blue {
     color: #000028;
+}
+
+
+.mob-nav {
+    background-color: #000088;
+}
+
+.nav-align {
+    text-align: right;
 }
 
 /*************Footer***************************/
@@ -45,5 +61,8 @@ footer {
 
 .sign-in {
     text-align: right;
-    color: ;
+}
+
+.sign-in a {
+    color: #9bf2ff;
 }
