@@ -1,0 +1,31 @@
+header {
+    background: linear-gradient(to right, #000028 20%, #ffffff 70%);
+    border-bottom: #000028 solid 1px;
+}
+
+body {
+    font-family: 'martel-sans';
+}
+
+.name-link {
+    width: fit-content;
+    font-family: "Whisper", cursive;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title-link {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nav-area {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.text-dark-blue {
+    color: #000028;
+}
