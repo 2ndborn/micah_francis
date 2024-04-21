@@ -60,6 +60,14 @@ footer {
     margin-left: 24px;
 }
 
+.link {
+    color: #004e9f;
+}
+
+.git {
+    color: #00000b;
+}
+
 .sign-in {
     text-align: right;
 }
@@ -67,9 +75,32 @@ footer {
 .sign-in a {
     color: #9bf2ff;
 }
+/****************************Home**********************************/
 
-/****************************Media Queries**********************************/
+.home-image {
+    background: url(/media/micah_hero.jpg) no-repeat;
+}
+
+.bg-home {
+    background-size: cover;
+    height: 100vh;
+    background-position-y: -150px;
+}
+
 
 .header-container {
-    padding-top: 164px;
+    padding-top: 104px;
+}
+
+/****************************Media Queries**********************************/
+@media (max-width: 1366px) {
+    .bg-home {
+        background-position-y: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .bg-home {
+        background-position-x: -250px;
+    }
 }
