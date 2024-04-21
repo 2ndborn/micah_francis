@@ -10,6 +10,8 @@ body {
     font-family: 'martel-sans';
 }
 
+/****************************Header**********************************/
+
 .name-link {
     width: fit-content;
     font-family: "Whisper", cursive;
@@ -51,7 +53,11 @@ footer {
     list-style-type: none;
 }
 .social-icons {
-    font-size: xx-large;
+    font-size: 5rem;
+}
+
+.social-container {
+    margin-left: 24px;
 }
 
 .sign-in {
@@ -60,4 +66,10 @@ footer {
 
 .sign-in a {
     color: #9bf2ff;
+}
+
+/****************************Media Queries**********************************/
+
+.header-container {
+    padding-top: 164px;
 }
