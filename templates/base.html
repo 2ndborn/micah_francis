@@ -44,27 +44,27 @@
           </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center"></div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-right">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
           <ul class="list-inline list-unstyled mt-3">
-            <li class="list-inline-item mx-3">
+            <li class="list-inline-item mx-1">
               <a href="" class="nav-area text-dark-blue text-decoration-none">
                 <div class="text-center"><i class="fa-solid fa-house"></i></div>
                 <p>Home</p>
               </a>
             </li>
-            <li class="list-inline-item mx-3">
+            <li class="list-inline-item mx-1">
               <a href="" class="nav-area text-dark-blue text-decoration-none">
                 <div class="text-center"><i class="fa-solid fa-book-open-reader"></i></div>
                 <p>About Me</p>
               </a>
             </li>
-            <li class="list-inline-item mx-3">
+            <li class="list-inline-item mx-1">
               <a href="" class="nav-area text-dark-blue text-decoration-none">
                 <div class="text-center"><i class="fa-solid fa-folder"></i></div>
                 <p>Portfolio</p>
               </a>
             </li>
-            <li class="list-inline-item mx-3">
+            <li class="list-inline-item mx-1">
               <a href="" class="nav-area text-dark-blue text-decoration-none">
                 <div class="text-center"><i class="fa-solid fa-comment"></i></div>
                 <p>Contact</p>
@@ -74,20 +74,16 @@
         </div>
       </div>
       <div class="row d-block d-lg-none mob-nav">
-        <div class="col-6">
-          <a href="{% url 'home' %}" class="text-decoration-none">
-            <h1 class="mb-0 name-link text-white">Micah Francis</h1>
-            <p class="title-link text-white">Software Developer</p>
-          </a>
-        </div>
-        <div class="col-6">
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+              <a href="{% url 'home' %}" class="text-decoration-none">
+                <h1 class="mb-0 name-link text-white">Micah Francis</h1>
+                <p class="title-link text-white">Software Developer</p>
+              </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               {% include 'includes/mobile-nav.html' %}
           </nav>
-        </div>
       </div>
     </header>
     
@@ -101,30 +97,15 @@
     {% endblock %}
 
     <footer class="container-fluid fixed-bottom position-absolute">
-      <div class="row pt-3 text-white">
-          <div class="col-12 col-lg-4">
+      <div class="row pt-3 text-white text-center">
+          <div class="col-12">
             <ul class="footer-content">
               <li><h5 class="mx-3"><strong>Micah Francis</strong></h6></li>
               <li><h6><span class="mx-3"><i class="fa-solid fa-envelope"></i></span>mfrancisr@hotmail.com</h5></li>
               <li><h6><span class="mx-3"><i class="fa-solid fa-phone"></i></span>07958 774 171</h6></li>
               <li><h6><span class="mx-3"><i class="fa-solid fa-location-dot"></i></span>Aylesbury, United Kingdom</h6></li>
-            </ul>
-          </div>
-          <div class="col-12 col-lg-4">
-            <p>Map</p>
-          </div>          
-          <div class="col-12 col-lg-4 pt-4 text-center">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="">
-                  <span class="social-icons mx-2 text-white"><i class="fa-brands fa-github"></i></span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="">
-                  <span class="social-icons mx-2 text-white"><i class="fa-brands fa-linkedin"></i></span>
-                </a>
-              </li>
+              <li><a href="" class="text-decoration-none text-white"><h6><span class="mx-3"><i class="fa-brands fa-github"></i></span>github.com/2ndborn</h6></a></li>
+              <li><a href="" class="text-decoration-none text-white"><h6><span class="mx-3"><i class="fa-brands fa-linkedin"></i></span>linkedin.com/in/micah-francis-87bb0832</h6></a></li>
             </ul>
           </div>
       </div>

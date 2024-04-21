@@ -3,7 +3,7 @@ html {
 }
 
 header {
-    background: linear-gradient(to right, #000088 20%, rgba(255, 255, 255, 0) 70%);
+    background: linear-gradient(to right, #6594d4 20%, rgba(255, 255, 255) 70%);
 }
 
 body {
@@ -37,14 +37,9 @@ body {
     color: #000028;
 }
 
-
-.mob-nav {
-    background-color: #000088;
-}
-
-.nav-align {
-    text-align: right;
-}
+.bg-nav {
+    background: linear-gradient(to right, #6594d4 20%, rgba(255, 255, 255) 70%)
+  }
 
 /*************Footer***************************/
 
