@@ -3,7 +3,8 @@ html {
 }
 
 header {
-    background: linear-gradient(to right, #6594d4 20%, rgba(255, 255, 255) 70%);
+    background: linear-gradient(to right, #2b5288 20%, rgba(255, 255, 255) 70%);
+    border-bottom: #2b5288 solid 1px;
 }
 
 body {
@@ -14,16 +15,24 @@ body {
 
 .name-link {
     width: fit-content;
-    font-family: "Whisper", cursive;
-    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+    color: #000028;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .title-link {
     width: fit-content;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 100;
+    font-family: "Noto Sans", sans-serif;
+    color: #000028;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .nav-area {
@@ -101,6 +110,11 @@ footer {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+}
+
+.btn-dark-blue {
+    background: #000028;
+    color: white;
 }
 
 /****************************Media Queries**********************************/
