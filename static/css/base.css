@@ -74,6 +74,9 @@ body {
     height: 250px;
   }
 
+  .about-container {
+    margin-top: 146px;
+  }
 /*************Footer***************************/
 
 footer {
@@ -160,5 +163,9 @@ footer {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 104px;
+    }
+
+    .about-container {
+        margin-top: 48px;
     }
 }
