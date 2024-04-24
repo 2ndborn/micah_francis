@@ -77,6 +77,24 @@ body {
   .about-container {
     margin: 146px 0;
   }
+
+  .timeline {
+    border-left: 2px solid black;
+    position: relative;
+    padding: 1em 2em 0 2em;
+  }
+
+  .timeline:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6.5px;
+    border-radius: 12px;
+    content: '';
+    background: #121111;
+  }
 /*************Footer***************************/
 
 footer {
