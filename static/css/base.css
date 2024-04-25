@@ -95,6 +95,18 @@ body {
     content: '';
     background: #121111;
   }
+
+  .border-bottoms {
+    border-bottom: solid 1px;
+  }
+  
+  .tech-card {
+    border: #000028 solid 1px;
+    border-radius: 10px;
+    background-color: #e6f1ff;
+    font-size: 1.1rem;
+    margin: 20px;
+  }
 /*************Footer***************************/
 
 footer {
@@ -170,7 +182,7 @@ footer {
 
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+      max-width: 90%;
     }
 
     .title-bg {
