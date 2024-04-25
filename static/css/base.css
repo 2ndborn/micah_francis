@@ -68,14 +68,15 @@ body {
 /*************about***************************/
 
   .profile-pic {
-    background: url(/media/mikara-tmudder.jpg) center center no-repeat;
+    background: url(/media/micah_about.jpg) center center no-repeat;
     background-size: cover;
     width: 80%;
-    height: 250px;
+    height: 350px;
   }
 
   .about-content {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    text-align: justify;
   }
 
   .about-container {
