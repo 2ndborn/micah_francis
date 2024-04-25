@@ -74,6 +74,10 @@ body {
     height: 250px;
   }
 
+  .about-content {
+    font-size: 1.2rem;
+  }
+
   .about-container {
     margin: 146px 0;
   }
@@ -88,12 +92,13 @@ body {
     width: 12px;
     height: 12px;
     display: block;
-    top: 2.4em;
+    top: 1.5em;
     position: absolute;
     left: -6.5px;
     border-radius: 12px;
     content: '';
-    background: #121111;
+    background: #9bf2ff;
+    border: #000028 solid 2px;
   }
 
   .border-bottoms {
@@ -121,10 +126,6 @@ footer {
     font-size: 5rem;
 }
 
-/* .social-container {
-    margin-left: 24px;
-} */
-
 .link {
     color: #004e9f;
 }
@@ -140,6 +141,7 @@ footer {
 .sign-in a {
     color: #9bf2ff;
 }
+
 /****************************Home**********************************/
 
 /* .home-image {
