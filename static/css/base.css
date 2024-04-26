@@ -84,7 +84,7 @@ body {
   }
 
   .timeline {
-    border-left: 2px solid black;
+    border-left: 2px solid #013163;
     position: relative;
     padding: 1em 2em 0 2em;
   }
