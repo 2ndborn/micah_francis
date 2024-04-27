@@ -34,18 +34,16 @@
                     aria-controls="collapseOne">Education</h1>
                 <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
                     {% for e in education %}
-                    <div class="col-12 col-lg-4 my-auto">
-                        <h3>{{ e.from_date|date:"M Y" }} - {{ e.to_date|date:"M Y" }}</h3>
+                    <div class="col-12 col-lg-3">
+                        <h4>{{ e.from_date|date:"M Y" }} - {{ e.to_date|date:"M Y" }}</h4>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-6">
+                    <div class="col-12 col-lg-3">
                         <h5>{{ e.institution }}</h5>
                     </div>
-                    <div class="col-12 col-lg-4 col-md-6">
-                       <h5>London</h5>
+                    <div class="col-12 col-lg-3">
+                       <h4>London</h4>
                     </div>
-                    <div class="col-12 col-lg-4"></div>
-                    <div class="col-12 col-lg-8">
-                        <div class="px-auto">
+                        <div class="col-12 col-lg-3">
                             <h4>{{ e.qualification}}</h4>
                         </div>
                     </div>
