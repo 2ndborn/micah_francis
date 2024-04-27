@@ -39,11 +39,7 @@ class Work_experience(models.Model):
         return self.job_title
 
 class Interest(models.Model):
-    interest1 = models.TextField(max_length=100, blank=False)
-    interest2 = models.TextField(max_length=100, blank=False)
-    interest3 = models.TextField(max_length=100, blank=False)
-    interest4 = models.TextField(max_length=100, blank=True)
-    interest5 = models.TextField(max_length=100, blank=True)
+    interest = models.TextField(max_length=100, null=True, blank=False)
 
     def __str__(self):
-        return self.interest1
+        return self.interest

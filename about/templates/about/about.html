@@ -141,11 +141,11 @@
                     aria-expanded="false" aria-controls="collapseFour">Additional Interest/Information</h1>
                 <div id="collapseFour" class="row collapse mb-4" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="col-12 my-auto about-content">
+                        {% for interest in interests %}
                         <ul>
-                            <li>I am planning on completing my first Hackathon.</li>
-                            <li>I am using websites like leetcode.com to help me get ready for technical interviews.</li>
-                            <li>I like watching YouTube coding tutorials to build my understanding of web design.</li>
+                            <li>{{ interest.interest }}</li>
                         </ul>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
