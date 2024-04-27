@@ -34,20 +34,30 @@
                     aria-controls="collapseOne">Education</h1>
                 <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
                     {% for e in education %}
-                    <div class="col-12 col-lg-3">
-                        <h4>{{ e.from_date|date:"M Y" }} - {{ e.to_date|date:"M Y" }}</h4>
+                    <div class="col-12 col-lg-2 mx-auto mb-2">
+                        <h5>{{ e.from_date|date:"M y" }} - {{ e.to_date|date:"M y" }}</h5>
                     </div>
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-4 mx-auto mb-2">
                         <h5>{{ e.institution }}</h5>
                     </div>
-                    <div class="col-12 col-lg-3">
-                       <h4>London</h4>
+                    <div class="col-12 col-lg-4 mx-auto mb-2">
+                        <h5>{{ e.qualification}}</h5>
                     </div>
-                        <div class="col-12 col-lg-3">
-                            <h4>{{ e.qualification}}</h4>
+                    <div class="col-12 col-lg-2 mx-auto mb-2">
+                        <h5>{{ e.location }}</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                            <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
                         </div>
                     </div>
                     {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-12 add-btn mb-2">
+                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                    </div>
                 </div>
             </div>
             <div class="container mb-5 border-bottoms">
@@ -104,7 +114,7 @@
                 <div id="collapseThree" class="row collapse mb-5" aria-labelledby="headingThree" data-parent="#accordionExample">
                     {% for work in work_experience %}
                     <div class="col-12 timeline py-3 my-auto">
-                        <h4>{{ work.from_date|date:"M Y" }} - {{ work.to_date|date:"M Y" }}</h4>
+                        <h4>{{ work.from_date|date:"M y" }} - {{ work.to_date|date:"M y" }}</h4>
                         <div class="row py-3">
                             <div class="col-4">
                                 <h5><strong>{{ work.job_title }}</strong></h5>
@@ -124,7 +134,18 @@
                             <li>{{ work.achievement5 }}</li>
                         </ul>
                     </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                            <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                        </div>
+                    </div>
                     {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-12 add-btn mb-2">
+                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                    </div>
                 </div>
             </div>
             <div class="container mb-5">
@@ -136,7 +157,18 @@
                         <ul>
                             <li>{{ interest.interest }}</li>
                         </ul>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                            </div>
+                        </div>
                         {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 add-btn mb-2">
+                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
                     </div>
                 </div>
             </div>

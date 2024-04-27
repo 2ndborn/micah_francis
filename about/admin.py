@@ -15,6 +15,7 @@ class EducationAdmin(admin.ModelAdmin):
         'to_date',
         'institution',
         'qualification',
+        'location',
     )
 
 

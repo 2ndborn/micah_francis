@@ -18,9 +18,10 @@ class Education(models.Model):
     to_date = models.DateField(blank=False)
     institution = models.CharField(max_length=100, blank=False)
     qualification = models.CharField(max_length=100, blank=False)
+    location = models.CharField(max_length=25, null=True, blank=False)
 
     def __str__(self):
-        return self.qualifation
+        return self.qualification
 
 
 class Work_experience(models.Model):
