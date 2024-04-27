@@ -14,26 +14,22 @@ class About_me(models.Model):
 
 
 class Education(models.Model):
-    from_date = models.DateTimeField(blank=False)
-    to_date = models.DateTimeField(blank=False)
+    from_date = models.DateField(blank=False)
+    to_date = models.DateField(blank=False)
     institution = models.CharField(max_length=100, blank=False)
-    qualifation = models.CharField(max_length=100, blank=False)
+    qualification = models.CharField(max_length=100, blank=False)
 
     def __str__(self):
         return self.qualifation
 
 
 class Work_experience(models.Model):
-    from_date = models.DateTimeField(blank=False)
-    to_date = models.DateTimeField(blank=True)
+    from_date = models.DateField(blank=False)
+    to_date = models.DateField(blank=True)
     job_title = models.CharField(max_length=25, blank=False)
     company = models.CharField(max_length=25, blank=False)
     location = models.CharField(max_length=25, blank=False)
-    achievement1 = models.TextField(max_length=25, blank=False)
-    achievement2 = models.TextField(max_length=25, blank=False)
-    achievement3 = models.TextField(max_length=25, blank=False)
-    achievement4 = models.TextField(max_length=25, blank=False)
-    achievement5 = models.TextField(max_length=25, blank=False)
+    achievement = models.TextField(max_length=250, blank=False)
 
     def __str__(self):
         return self.job_title
