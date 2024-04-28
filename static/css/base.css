@@ -118,6 +118,10 @@ body {
     text-align: right;
   }
 
+  .form-bg {
+    background-color: #e6eefa;
+  }
+
 /*************Footer***************************/
 
 footer {

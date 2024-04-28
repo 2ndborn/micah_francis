@@ -12,10 +12,17 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid about-container text-dark-blue">
+        <div class="container border-bottoms pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+        </div>
         <div class="accordion" id="accordionExample">
-            <div class="container mb-5 pb-5 border-bottoms">
+            <div class="container my-5 pb-5 border-bottoms">
                 <div class="row">
-                    <h1 class="mb-5 text-center">About Me</h1>
+                    <h2 class="mb-5 text-center">Executive Summary</h2>
                     <div class="col-12 col-lg-7 col-md-6 my-auto">
                         <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -32,31 +39,31 @@
             <div class="container mb-5 border-bottoms">
                 <h1 class="mb-5 text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                     aria-controls="collapseOne">Education</h1>
-                <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
                     {% for e in education %}
-                    <div class="col-12 col-lg-2 mx-auto mb-2">
-                        <h5>{{ e.from_date|date:"M y" }} - {{ e.to_date|date:"M y" }}</h5>
-                    </div>
-                    <div class="col-12 col-lg-4 mx-auto mb-2">
-                        <h5>{{ e.institution }}</h5>
-                    </div>
-                    <div class="col-12 col-lg-4 mx-auto mb-2">
-                        <h5>{{ e.qualification}}</h5>
-                    </div>
-                    <div class="col-12 col-lg-2 mx-auto mb-2">
-                        <h5>{{ e.location }}</h5>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
-                            <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                    <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="col-12 col-lg-2 mx-auto mb-2">
+                            <h5>{{ e.from_date|date:"M y" }} - {{ e.to_date|date:"M y" }}</h5>
+                        </div>
+                        <div class="col-12 col-lg-4 mx-auto mb-2">
+                            <h5>{{ e.institution }}</h5>
+                        </div>
+                        <div class="col-12 col-lg-4 mx-auto mb-2">
+                            <h5>{{ e.qualification}}</h5>
+                        </div>
+                        <div class="col-12 col-lg-2 mx-auto mb-2">
+                            <h5>{{ e.location }}</h5>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-12 text-center">
+                                <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                            </div>
                         </div>
                     </div>
                     {% endfor %}
-                </div>
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
-                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                        <a href="{% url 'add_education' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
                     </div>
                 </div>
             </div>
