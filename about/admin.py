@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import About_me, Education, Work_experience, Interest
+from .models import About, Education, Work_experience, Interest
 from django import forms
 
-class About_meAdmin(admin.ModelAdmin):
+class AboutAdmin(admin.ModelAdmin):
     list_display = (
         'content',
         'image',
@@ -49,7 +49,7 @@ class InterestAdmin(admin.ModelAdmin):
     )
     
 
-admin.site.register(About_me, About_meAdmin)
+admin.site.register(About, AboutAdmin)
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Work_experience, Work_experienceAdmin)
 admin.site.register(Interest, InterestAdmin)

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Education
+from .models import Education, Interest
 
 
 class EducationForm(forms.ModelForm):
@@ -19,3 +19,11 @@ class EducationForm(forms.ModelForm):
 
     from_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
+
+class InterestForm(forms.ModelForm):
+
+
+    class Meta:
+        model = Interest
+        fields = '__all__'

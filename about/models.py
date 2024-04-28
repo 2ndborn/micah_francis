@@ -1,6 +1,6 @@
 from django.db import models
 
-class About_me(models.Model):
+class About(models.Model):
 
     class Meta:
         verbose_name = 'About'

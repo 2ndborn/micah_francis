@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Education, Work_experience, Interest
 
-from .forms import EducationForm
+from .forms import EducationForm, InterestForm
 
 def about(request):
    """A view to render the about me page"""
@@ -52,11 +52,12 @@ def edit_education(request, education_id):
    else:
       form = EducationForm(instance=education)
 
+   template = 'about/edit_education.html'
    context = {
       'form': form,
    }
 
-   return render(request, 'about/edit_education.html', context)
+   return render(request, template, context)
 
    
 def delete_education(request, education_id):
@@ -64,4 +65,53 @@ def delete_education(request, education_id):
 
    education = get_object_or_404(Education, pk=education_id)
    education.delete()
+   return redirect(reverse('about'))
+
+
+def add_interest(request):
+   """A view to add to the Interest section"""
+
+   if request.method == 'POST':
+      form = InterestForm(request.POST, request.FILES)
+      if form.is_valid():
+         form.save()
+         return redirect(reverse('about'))
+   
+   else:
+      form = InterestForm()
+
+   template = 'about/add_interest.html'
+   context = {
+      'form': form,
+   }
+
+   return render(request, template, context)
+
+
+def edit_interest(request, interest_id):
+   """A view to edit Interest entries"""
+
+   interest = get_object_or_404(Interest, pk=interest_id)
+   if request.method == 'POST':
+      form = InterestForm(request.POST, request.FILES, instance=interest)
+      if form.is_valid():
+         form.save()
+         return redirect(reverse('about'))
+   
+   else:
+      form = InterestForm(instance=interest)
+
+   template = 'about/edit_interest.html'
+   context = {
+      'form': form,
+   }
+
+   return render(request, template, context)
+
+
+def delete_interest(request, interest_id):
+   """A view to delete Interest entries"""
+
+   interest = get_object_or_404(Interest, pk=interest_id)
+   interest.delete()
    return redirect(reverse('about'))
