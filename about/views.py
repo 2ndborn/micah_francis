@@ -57,3 +57,11 @@ def edit_education(request, education_id):
    }
 
    return render(request, 'about/edit_education.html', context)
+
+   
+def delete_education(request, education_id):
+   """A view to delete Education entries"""
+
+   education = get_object_or_404(Education, pk=education_id)
+   education.delete()
+   return redirect(reverse('about'))
