@@ -1,5 +1,13 @@
 from django import forms
-from .models import Education, Interest
+from .models import About, Education, Interest
+
+
+class AboutForm(forms.ModelForm):
+
+
+    class Meta:
+        model = About
+        fields = '__all__'
 
 
 class EducationForm(forms.ModelForm):

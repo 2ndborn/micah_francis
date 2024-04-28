@@ -5,6 +5,7 @@ from django import forms
 class AboutAdmin(admin.ModelAdmin):
     list_display = (
         'content',
+        'description',
         'image',
     )
 

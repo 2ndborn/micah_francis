@@ -6,6 +6,7 @@ class About(models.Model):
         verbose_name = 'About'
 
     content = models.TextField(max_length=500, blank=False)
+    description = models.CharField(max_length=25, null=True, blank=False)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

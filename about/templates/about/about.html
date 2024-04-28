@@ -29,9 +29,20 @@
                         </div>
                         <div class="col-12 col-lg-5 col-md-6">
                             <div class="profile-pic mx-auto">
+                                <img src="{{ a.image }}" alt="">
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-12 text-center">
+                                <a href="{% url 'edit_about' a.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
                             </div>
                         </div>
                     {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col-12 add-btn mb-2">
+                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                    </div>
                 </div>
             </div>
             <div class="container mb-5 border-bottoms">

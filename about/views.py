@@ -1,22 +1,45 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Education, Work_experience, Interest
+from .models import About, Education, Work_experience, Interest
 
-from .forms import EducationForm, InterestForm
+from .forms import AboutForm, EducationForm, InterestForm
 
 def about(request):
    """A view to render the about me page"""
 
+   about = About.objects.all()
    education = Education.objects.all()
    work_experience = Work_experience.objects.all()
    interests = Interest.objects.all()
 
    context = {
+      'about': about,
       'education': education,
       'interests': interests,
       'work_experience': work_experience,
    }
 
    return render(request, 'about/about.html', context)
+
+
+def edit_about(request, about_id):
+   """A view to edit the About section"""
+
+   about = get_object_or_404(About, pk=about_id)
+   if request.method == 'POST':
+      form = AboutForm(request.POST, request.FILES, instance=about)
+      if form.is_valid():
+         form.save()
+         return redirect(reverse('about'))
+   
+   else:
+      form = AboutForm(instance=about)
+
+   template = 'about/edit_about.html'
+   context = {
+      'form': form,
+   }
+
+   return render(request, template, context)
 
 
 def add_education(request):
