@@ -20,28 +20,31 @@
             </div>
         </div>
         <div class="container my-5 pb-5 border-bottoms">
+            {% for port in portfolio %}
             <div class="row">
                 <div class="col-12">
-                    <h3 class="mb-2">Hair Is Art</h3>
+                    <h3 class="mb-2">{{ port.title }}</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-7 col-md-6 my-auto">
-                    <p class="about-content">A website for a freelance hairdresser to showcase their work to attract future business.</p>
-                    <p>Technologies used to build : HTML, CSS, JavaScript,  <a href="">https://github.com/2ndborn/HairIsArt</a></p>
+                    <p class="about-content">{{ port.description }}.</p>
+                    <p>Technologies used to build : {{ port.technologies }} <a href="">{{ port.web_address}}</a></p>
                 </div>
                 <div class="col-12 col-lg-5 col-md-6">
                     <div class="portfolio-pic mx-auto">
+                        <img src="{{ port.image }}" alt="">
                     </div>
                 </div>
                 <div class="row my-3">
                     <div class="col-12 text-center">
-                        <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
-                        <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                        <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                        <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
                     </div>
                 </div>
                 <hr class="featurette-divider">
             </div>
+            {% endfor %}
             <div class="row">
                 <div class="col-12 col-lg-5 col-md-6">
                     <div class="portfolio-pic mx-auto">
