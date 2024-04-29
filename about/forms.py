@@ -31,7 +31,6 @@ class EducationForm(forms.ModelForm):
 
 class InterestForm(forms.ModelForm):
 
-
     class Meta:
         model = Interest
         fields = '__all__'

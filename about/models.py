@@ -36,6 +36,7 @@ class Work_experience(models.Model):
     def __str__(self):
         return self.job_title
 
+
 class Interest(models.Model):
     interest = models.TextField(max_length=100, null=True, blank=False)
 

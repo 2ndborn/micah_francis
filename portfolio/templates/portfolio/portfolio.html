@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid about-container text-dark-blue">
+        <div class="container border-bottoms pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container my-5 pb-5 border-bottoms">
+            <div class="row">
+                <div class="col-12 col-lg-7 col-md-6 my-auto">
+                    <h4>Hair Is Art</h4>
+                    <p class="about-content">A website for a freelance hairdresser to showcase their work to attract future business.</p>
+                    <p>Technologies used to build : HTML, CSS, JavaScript,  <a href="">https://github.com/2ndborn/HairIsArt</a></p>
+                </div>
+                <div class="col-12 col-lg-5 col-md-6">
+                    <div class="portfolio-pic mx-auto">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-12 text-center">
+                        <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                        <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 add-btn mb-2">
+            <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+        </div>
+    </div>
+    {% endblock %}
