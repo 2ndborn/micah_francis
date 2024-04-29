@@ -9,6 +9,7 @@ class PortfolioAdmin(admin.ModelAdmin):
         'description',
         'technologies',
         'web_address',
+        'image',
     )
 
 admin.site.register(Portfolio, PortfolioAdmin)
