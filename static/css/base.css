@@ -129,7 +129,6 @@ body {
 /*************portfolio***************************/
 
 .portfolio-pic {
-    background: url(/media/hair_is_art.png) center center no-repeat;
     background-size: contain;
     width: 80%;
     height: 250px;
