@@ -1,0 +1,22 @@
+{% for port in portfolio %}
+    <div class="col-12 col-lg-7 col-md-6 my-auto">
+        <h2 class="mb-3">{{ port.title }}</h2>
+        <p class="about-content">{{ port.description }}.</p>
+        <p>Technologies used to build : {{ port.technologies }} <a href="">{{ port.web_address}}</a></p>
+    </div>
+    <div class="col-12 col-lg-5 col-md-6 my-auto">
+        <div>
+            <img class="img-fluid img-thumbnail" src="{{ port.image.url }}" alt="">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-12 text-center">
+            <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+            <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+        </div>
+    </div>
+    {% if forloop.counter != forloop.length %}
+        <hr class="featurette-divider">
+        <p>Counter:{{ forloop.counter }} | length: {{ forloop.length }}</p>
+    {% endif %}
+{% endfor %}

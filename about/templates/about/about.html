@@ -28,9 +28,15 @@
                             <p class="about-content">{{ a.content }}</p>
                         </div>
                         <div class="col-12 col-lg-5 col-md-6">
-                            <div class="profile-pic mx-auto">
-                                <img src="{{ a.image }}" alt="">
+                        {% if a.image %}
+                            <div>
+                                <img class="img-fluid img-thumbnail mx-auto" src="{{ a.image.url }}" alt="{{ a.description}}">
                             </div>
+                        {% else %}
+                            <div>
+                                <img class="img-fluid img-thumbnail mx-auto" src="{{ MEDIA.URL }}" alt="{{ a.description}}">
+                            </div>
+                        {% endif %}
                         </div>
                         <div class="row my-3">
                             <div class="col-12 text-center">

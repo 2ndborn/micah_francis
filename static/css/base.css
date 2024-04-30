@@ -71,15 +71,14 @@ body {
 
 /*************about***************************/
 
-  .profile-pic {
-    background: url(/media/micah_about.jpg) center center no-repeat;
-    background-size: cover;
-    width: 80%;
+  .profile-image {
+    background-size: contain;
+    width: 70%;
     height: 350px;
   }
 
   .about-content {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: justify;
   }
 

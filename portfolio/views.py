@@ -51,6 +51,7 @@ def edit_portfolio(request, portfolio_id):
     template = 'portfolio/edit_portfolio.html'
     context = {
         'form': form,
+        'portfolio': portfolio,
     }
 
     return render(request, template, context)

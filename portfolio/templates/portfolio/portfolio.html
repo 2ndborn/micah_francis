@@ -20,17 +20,17 @@
             </div>
         </div>
         <div class="container my-5 pb-5">
-            {% for port in portfolio %}
-                <div class="row">
+            <div class="row d-none d-md-flex">
+                {% for port in portfolio %}
                     {% if forloop.counter0|divisibleby:2 %}
                         <div class="col-12 col-lg-7 col-md-6 my-auto">
                             <h2 class="mb-3">{{ port.title }}</h2>
                             <p class="about-content">{{ port.description }}.</p>
                             <p>Technologies used to build : {{ port.technologies }} <a href="">{{ port.web_address}}</a></p>
                         </div>
-                        <div class="col-12 col-lg-5 col-md-6">
-                            <div class="card h-100">
-                                <img class="card-img-top img-fluid" src="{{ port.image.url }}" alt="">
+                        <div class="col-12 col-lg-5 col-md-6 my-auto">
+                            <div>
+                                <img class="img-fluid img-thumbnail" src="{{ port.image.url }}" alt="">
                             </div>
                         </div>
                         <div class="row my-3">
@@ -40,13 +40,13 @@
                             </div>
                         </div>
                     {% else %}
-                        <div class="col-12 col-lg-5 col-md-6">
-                            <div class="card h-100">
-                                <img class="card-img-top img-fluid" src="{{ port.image.url }}" alt="">
+                        <div class="col-12 col-lg-5 col-md-6 my-auto">
+                            <div>
+                                <img class="img-fluid img-thumbnail" src="{{ port.image.url }}" alt="">
                             </div>
                         </div>
                         <div class="col-12 col-lg-7 col-md-6 my-auto">
-                            <h3 class="mb-2">{{ port.title }}</h3>
+                            <h2 class="mb-3">{{ port.title }}</h2>
                             <p class="about-content">{{ port.description }}.</p>
                             <p>Technologies used to build : {{ port.technologies }} <a href="">{{ port.web_address}}</a></p>
                         </div>
@@ -57,12 +57,15 @@
                             </div>
                         </div>
                     {% endif %}
-                </div>
-                {% if forloop.counter != forloop.length %}
-                    <hr class="featurette-divider">
-                    <p>Counter:{{ forloop.counter }} | length: {{ forloop.length }}</p>
-                {% endif %}
-            {% endfor %}
+                    {% if forloop.counter != forloop.length %}
+                        <hr class="featurette-divider">
+                        <p>Counter:{{ forloop.counter }} | length: {{ forloop.length }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="row d-block d-lg-none">
+                {% include 'portfolio/includes/mobile_port.html' %}
+            </div>
             <div class="row">
                 <div class="col-12 add-btn mb-2">
                     <a href="{% url 'add_portfolio' %}" class="btn btn-primary text-decoration-none mb-5">Add to Portfolio</a>
