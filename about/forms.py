@@ -2,6 +2,7 @@ from django import forms
 from .models import About, Education, Work_experience, Achievement, Interest
 
 
+
 class AboutForm(forms.ModelForm):
 
 
