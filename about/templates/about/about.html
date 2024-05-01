@@ -149,11 +149,9 @@
                             </div>
                         </div>
                         <ul class="unstyled-list">
-                            <li>{{ work.achievement1 }}</li>
-                            <li>{{ work.achievement2 }}</li>
-                            <li>{{ work.achievement3 }}</li>
-                            <li>{{ work.achievement4 }}</li>
-                            <li>{{ work.achievement5 }}</li>
+                            {% for achieve in work.achievement_set.all %}
+                                <li>{{ achieve.achievement }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="row">
