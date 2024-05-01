@@ -30,11 +30,14 @@ class EducationForm(forms.ModelForm):
 
 
 class Work_experienceForm(forms.ModelForm):
-    model = Work_experience
-    fields = '__all__'
+    class Meta:
+        model = Work_experience
+        fields = '__all__'
     
     def __init__(self, *args, **kwargs):
-        super(EducationForm, self).__init__(*args, **kwargs)
+        super(Work_experienceForm, self).__init__(*args, **kwargs)
+
+        work_fields = ['from_date', 'to_date', 'job_title', 'company', 'location']
 
         for w in work_fields:
             self.fields[w].widget.attrs.update({'class': 'my-3'})

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import About, Education, Work_experience, Interest
 
-from .forms import AboutForm, EducationForm, InterestForm
+from .forms import AboutForm, EducationForm, Work_experienceForm, InterestForm
 
 def about(request):
    """A view to render the about me page"""
@@ -89,6 +89,26 @@ def delete_education(request, education_id):
    education = get_object_or_404(Education, pk=education_id)
    education.delete()
    return redirect(reverse('about'))
+
+
+def add_work(request):
+   """A view to add to the Work Experience section"""
+
+   if request.method == 'POST':
+      form = Work_experienceForm(request.POST, request.FILES)
+      if form.is_valid():
+         form.save()
+         return redirect(reverse('about'))
+   
+   else:
+      form = Work_experienceForm()
+
+   template = 'about/add_work.html'
+   context = {
+      'form': form,
+   }
+
+   return render(request, template, context)
 
 
 def add_interest(request):

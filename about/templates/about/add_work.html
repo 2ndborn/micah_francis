@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid about-container text-dark-blue">
+    <div class="container mb-5 pb-3 border-bottoms">
+        <div class="row">
+            <h1 class="mb-5 text-center">Add Work Experience</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1 col-md-6 offset-md-3">
+            <form method="POST" action="" class="form form-control form-bg">
+                {% csrf_token %}
+                <div class="my-3">
+                    {% for field in form %}
+                        {{ field | as_crispy_field }}
+                    {% endfor %}
+                </div>
+                <div class="text-center my-3">
+                    <a href="{% url 'about' %}" class="btn btn-danger">Cancel</a>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
