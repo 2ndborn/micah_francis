@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import About, Education, Work_experience, Interest
+from .models import About, Education, Work_experience, Achievement, Interest
 
-from .forms import AboutForm, EducationForm, Work_experienceForm, InterestForm
+from .forms import AboutForm, EducationForm, Work_experienceForm, AchievementForm, InterestForm
 
 def about(request):
    """A view to render the about me page"""
@@ -92,23 +92,27 @@ def delete_education(request, education_id):
 
 
 def add_work(request):
-   """A view to add to the Work Experience section"""
+    if request.method == 'POST':
+        work_form = Work_experienceForm(request.POST, request.FILES)
+        achievement_form = AchievementForm(request.POST)
 
-   if request.method == 'POST':
-      form = Work_experienceForm(request.POST, request.FILES)
-      if form.is_valid():
-         form.save()
-         return redirect(reverse('about'))
-   
-   else:
-      form = Work_experienceForm()
+        if work_form.is_valid() and achievement_form.is_valid():
+            work_experience = work_form.save()
+            achievement = achievement_form.save(commit=False)
+            achievement.work_experience = work_experience
+            achievement.save()
 
-   template = 'about/add_work.html'
-   context = {
-      'form': form,
-   }
+            return redirect(reverse('about'))
+    else:
+        work_form = Work_experienceForm()
+        achievement_form = AchievementForm()
 
-   return render(request, template, context)
+    context = {
+        'work_form': work_form,
+        'achievement_form': achievement_form,
+    }
+    return render(request, 'about/add_work.html', context)
+
 
 
 def add_interest(request):
