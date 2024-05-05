@@ -96,11 +96,17 @@
     {% block postloadjs %}
     {% endblock %}
 
-    <footer>
+    <footer class="fixed-bottom">
       <div class="row">
-        <div class="col-12"></div>
+        <div class="col-12">
+          <a href="{% url 'account_login' %}">
+            <div class="in-out-icon"><i class="fa-solid fa-lock-open"></i></div>
+          </a>
+          <!-- <a href="{% url 'account_logout' %}">
+              <div><i class="fa-solid fa-lock"></i></div>
+          </a> -->
+        </div>
       </div>
     </footer>
-
   </body>
 </html>
