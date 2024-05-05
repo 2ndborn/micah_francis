@@ -181,6 +181,18 @@ footer {
     color: white;
 }
 
+.social-icons {
+    font-size: 6rem;
+}
+
+.link {
+    color: #0955a1;
+}
+
+.git {
+    color: #010409;
+}
+
 .allauth-container {
     background-color: rgba(255, 255, 255, 0.6);
     margin-top: 10rem;
