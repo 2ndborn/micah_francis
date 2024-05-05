@@ -101,11 +101,11 @@
         <div class="col-12">
           {% if request.user.is_authenticated %}
             <a href="{% url 'account_logout' %}">
-              <div class="in-out-icon"><i class="fa-solid fa-lock"></i></div>
+              <div class="in-out-icon"><i class="fa-solid fa-lock-open"></i></div>
             </a>
           {% else %}
             <a href="{% url 'account_login' %}">
-              <div class="in-out-icon"><i class="fa-solid fa-lock-open"></i></div>
+              <div class="in-out-icon"><i class="fa-solid fa-lock"></i></div>
             </a>
           {% endif %}
         </div>

@@ -35,8 +35,10 @@
                         </div>
                         <div class="row my-3">
                             <div class="col-12 text-center">
-                                <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
-                                <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                                {% if request.user.is_authenticated %}
+                                    <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                    <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                                {% endif %}
                             </div>
                         </div>
                     {% else %}
@@ -52,15 +54,14 @@
                         </div>
                         <div class="row my-3">
                             <div class="col-12 text-center">
-                                <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
-                                <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                                {% if request.user.is_authenticated %}
+                                    <a href="{% url 'edit_portfolio' port.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                    <a href="{% url 'delete_portfolio' port.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                                {% endif %}
                             </div>
                         </div>
                     {% endif %}
-                    {% if forloop.counter != forloop.length %}
                         <hr class="featurette-divider">
-                        <p>Counter:{{ forloop.counter }} | length: {{ forloop.length }}</p>
-                    {% endif %}
                 {% endfor %}
             </div>
             <div class="row d-block d-lg-none">
@@ -68,7 +69,9 @@
             </div>
             <div class="row">
                 <div class="col-12 add-btn mb-2">
-                    <a href="{% url 'add_portfolio' %}" class="btn btn-primary text-decoration-none mb-5">Add to Portfolio</a>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'add_portfolio' %}" class="btn btn-primary text-decoration-none mb-5">Add to Portfolio</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
