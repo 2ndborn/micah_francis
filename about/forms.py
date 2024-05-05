@@ -1,5 +1,5 @@
 from django import forms
-from .models import About, Education, Work_experience, Achievement, Interest
+from .models import About, Education, Work_experience, Interest
 
 
 
@@ -12,8 +12,6 @@ class AboutForm(forms.ModelForm):
 
 
 class EducationForm(forms.ModelForm):
-
-
     class Meta:
         model = Education
         fields = '__all__'
@@ -34,23 +32,26 @@ class Work_experienceForm(forms.ModelForm):
     class Meta:
         model = Work_experience
         fields = '__all__'
-    
+
     def __init__(self, *args, **kwargs):
         super(Work_experienceForm, self).__init__(*args, **kwargs)
 
-        work_fields = ['from_date', 'to_date', 'job_title', 'company', 'location']
+        work_fields = [
+            'from_date',
+            'to_date',
+            'job_title',
+            'company',
+            'location',
+            'achievement1',                
+            'achievement2',
+            'achievement3'
+        ]
 
-        for w in work_fields:
-            self.fields[w].widget.attrs.update({'class': 'my-3'})
+        for work in work_fields:
+            self.fields[work].widget.attrs.update({'class': 'my-3'})
 
     from_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
-
-
-class AchievementForm(forms.ModelForm):
-    class Meta:
-        model = Achievement
-        fields = ['achievement']
 
 
 class InterestForm(forms.ModelForm):

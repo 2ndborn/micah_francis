@@ -23,17 +23,13 @@
             <form method="POST" action="" class="form form-control form-bg">
                 {% csrf_token %}
                 <div class="my-3">
-                    {{ work_form|crispy }}
-                    {{ achievement_form|crispy }}
+                    {% for field in form %}
+                        {{ field | as_crispy_field }}
+                    {% endfor %}
                 </div>
                 <div class="text-center my-3">
                     <a href="{% url 'about' %}" class="btn btn-danger">Cancel</a>
-                    <button type="submit" class="btn btn-success">Add</button>
-                    <button type="button" id="add-achievement" class="btn btn-primary">Add Achievement</button>
-                </div>
-                <div class="text-center my-3">
-                    <a href="{% url 'about' %}" class="btn btn-danger">Cancel</a>
-                    <button type="submit" class="btn btn-success">Add</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                 </div>
             </form>
         </div>
@@ -42,17 +38,4 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#add-achievement').on('click', function () {
-            const achievementField = $('<input>').attr({
-                type: 'text',
-                name: 'achievement',  // Name of the achievement field
-                placeholder: 'Enter achievement'
-            }).addClass('form-control my-3');
-
-            $('.form-bg').prepend(achievementField);
-        });
-    });
-</script>
 {% endblock %}

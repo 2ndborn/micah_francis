@@ -31,17 +31,12 @@ class Work_experience(models.Model):
     job_title = models.CharField(max_length=25, blank=False)
     company = models.CharField(max_length=25, blank=False)
     location = models.CharField(max_length=25, blank=False)
+    achievement1 = models.TextField(max_length=500, null=True, blank=False)    
+    achievement2 = models.TextField(max_length=500, blank=True)
+    achievement3 = models.TextField(max_length=500, blank=True)
 
     def __str__(self):
         return self.job_title
-
-
-class Achievement(models.Model):
-    work_experience = models.ForeignKey(Work_experience, on_delete=models.CASCADE)
-    achievement = models.TextField(max_length=250, blank=False)
-
-    def __str__(self):
-        return self.achievement
 
 
 class Interest(models.Model):

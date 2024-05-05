@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Education, Work_experience, Achievement, Interest
+from .models import About, Education, Work_experience, Interest
 from django import forms
 
 class AboutAdmin(admin.ModelAdmin):
@@ -22,11 +22,6 @@ class EducationAdmin(admin.ModelAdmin):
     )
 
 
-class AchievementInline(admin.TabularInline):
-    model = Achievement
-    extra = 1  # Number of extra forms displayed
-
-
 class Work_experienceAdmin(admin.ModelAdmin):
 
     list_display = (
@@ -35,8 +30,10 @@ class Work_experienceAdmin(admin.ModelAdmin):
         'job_title',
         'company',
         'location',
+        'achievement1',
+        'achievement2',
+        'achievement3',
     )
-    inlines = [AchievementInline]
 
 
 class InterestAdmin(admin.ModelAdmin):

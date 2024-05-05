@@ -15,12 +15,12 @@
 <div class="container-fluid about-container text-dark-blue">
     <div class="container mb-5 pb-3 border-bottoms">
         <div class="row">
-            <h1 class="mb-5 text-center">Edit Education</h1>
+            <h1 class="mb-5 text-center">Edit Work Experience</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-10 offset-1 col-md-6 offset-md-3">
-            <form method="POST" action="" class="form form-control form-bg">
+            <form method="POST" action="{% url 'edit_education %}" class="form form-control form-bg">
                 {% csrf_token %}
                 <div class="my-3">
                     {% for field in form %}

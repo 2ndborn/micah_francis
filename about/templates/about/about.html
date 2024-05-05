@@ -133,8 +133,8 @@
             <div class="container mb-5 border-bottoms">
                 <h1 class="mb-5 text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">Work Experience</h1>
+                {% for work in work_experience %}
                 <div id="collapseThree" class="row collapse mb-5" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    {% for work in work_experience %}
                     <div class="col-12 timeline py-3 my-auto">
                         <h4>{{ work.from_date|date:"M y" }} - {{ work.to_date|date:"M y" }}</h4>
                         <div class="row py-3">
@@ -149,19 +149,19 @@
                             </div>
                         </div>
                         <ul class="unstyled-list">
-                            {% for achieve in work.achievement_set.all %}
-                                <li>{{ achieve.achievement }}</li>
-                            {% endfor %}
+                            <li>{{ work.achievement1 }}</li>
+                            <li>{{ work.achievement2 }}</li>
+                            <li>{{ work.achievement3 }}</li>
                         </ul>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a href="" class="btn-sm btn-success text-decoration-none">Edit</a>
+                            <a href="{% url 'edit_work' work.id %}"  class="btn-sm btn-success text-decoration-none">Edit</a>
                             <a href="" class="btn-sm btn-danger text-decoration-none">Delete</a>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         <a href="{% url 'add_work' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
