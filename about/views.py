@@ -130,6 +130,14 @@ def edit_work(request, work_id):
    return render(request, template, context)
 
 
+def delete_work(request, work_id):
+   """A view to delete a Work Experience entries"""
+
+   work = get_object_or_404(Work_experience, pk=work_id)
+   work.delete()
+   return redirect(reverse('about'))
+
+
 def add_interest(request):
    """A view to add to the Interest section"""
 
