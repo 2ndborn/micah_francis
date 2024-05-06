@@ -73,6 +73,22 @@ body {
     text-align: right;
 }
 
+.message-container {
+    position: fixed;
+    top: 112px;
+    right: 80px;
+    z-index: 99999;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.custom-toast {
+    overflow: visible;
+}
 /*************about***************************/
 
   .profile-image {

@@ -86,7 +86,23 @@
           </nav>
       </div>
     </header>
-    
+    {% if messages %}
+      <div class="message-container">
+        {% for message in messages %}
+        <div class="toast custom-toast rounded-0 border-top-0" role="alert" data-autohide="false" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header bg-white">
+            <strong class="mr-auto">Update</strong>
+            <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body bg-white">
+            {{ message }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
     {% block page_header %}
     {% endblock %}
 
@@ -125,6 +141,8 @@
               }
             });
           });
+
+          $('.toast').toast('show');
       </script>
     {% endblock %}
   </body>
