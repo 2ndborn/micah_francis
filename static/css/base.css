@@ -57,6 +57,10 @@ body {
         "wdth" 100;
 }
 
+.nav-area:hover {
+    color: #0000286b;
+}
+
 .text-dark-blue {
     color: #000028;
 }
