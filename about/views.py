@@ -36,6 +36,8 @@ def edit_about(request, about_id):
          form.save()
          messages.info(request, 'About me updated!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to update About me. Please ensure the form is valid.')
    
    else:
       form = AboutForm(instance=about)
@@ -60,6 +62,8 @@ def add_education(request):
          form.save()
          messages.info(request, 'Education added!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to add Education. Please ensure the form is valid.')
    
    else:
       form = EducationForm()
@@ -85,6 +89,8 @@ def edit_education(request, education_id):
          form.save()
          messages.info(request, 'Education updated!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to update Education. Please ensure the form is valid.')
    
    else:
       form = EducationForm(instance=education)
@@ -121,6 +127,8 @@ def add_work(request):
          form.save()
          messages.info(request, 'Work Experience added!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to add Work Experience. Please ensure the form is valid.')
    else:
       form = Work_experienceForm()
 
@@ -145,6 +153,8 @@ def edit_work(request, work_id):
          form.save()
          messages.info(request, 'Work Experience updated!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to update Work Experience. Please ensure the form is valid.')
    
    else:
       form = Work_experienceForm(instance=work)
@@ -181,6 +191,8 @@ def add_interest(request):
          form.save()
          messages.info(request, 'Interest added!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to add Interest. Please ensure the form is valid.')
    
    else:
       form = InterestForm()
@@ -206,6 +218,8 @@ def edit_interest(request, interest_id):
          form.save()
          messages.info(request, 'Interest updated!')
          return redirect(reverse('about'))
+      else:
+         messages.info(request, 'Failed to update Interest. Please ensure the form is valid.')
    
    else:
       form = InterestForm(instance=interest)

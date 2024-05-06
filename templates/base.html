@@ -89,12 +89,13 @@
     {% if messages %}
       <div class="message-container">
         {% for message in messages %}
-        <div class="alert alert-primary alert-dismissible fade show alert-container" data-autohide="false" role="alert">
-          <strong>{{ message }}.</strong>
-          <button type="button" class="close btn" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+          {% with message.level as level %}
+              {% if level == 40 %}
+                {% include 'includes/alerts/alert_error.html' %}
+              {% else %}
+                {% include 'includes/alerts/alert_success.html' %}
+              {% endif %}
+          {% endwith %}
         {% endfor %}
       </div>
     {% endif %}

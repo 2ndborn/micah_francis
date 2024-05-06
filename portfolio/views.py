@@ -26,7 +26,10 @@ def add_portfolio(request):
         form = PortfolioForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Project added!')
             return redirect(reverse('portfolio'))
+        else:
+            messages.error(request, 'There was an error adding this project') 
     else:
       form = PortfolioForm()
 
@@ -48,7 +51,10 @@ def edit_portfolio(request, portfolio_id):
         form = PortfolioForm(request.POST, request.FILES, instance=portfolio)
         if form.is_valid():
             form.save()
-        return redirect(reverse('portfolio'))
+            messages.success(request, 'Project updated!')
+            return redirect(reverse('portfolio'))
+        else:
+            messages.error(request, 'There was an error updating this project') 
    
     else:
         form = PortfolioForm(instance=portfolio)
