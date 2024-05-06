@@ -103,7 +103,7 @@
               </a>
             </div>
           {% else %}
-            <div class="in-out-icon">
+            <div class="in-out-icon reveal-icon">
               <a href="{% url 'account_login' %}">
                 <i class="fa-solid fa-lock"></i>
               </a>
@@ -116,11 +116,15 @@
 
     {% block postloadjs %}
       <script type="text/javascript">
-        // $(document).ready(function () {
-        //     $("footer").click(function () {
-        //       $("footer").toggle();
-        //     });
-        //   });
+        $(document).ready(function () {
+          clickCount = 0;
+            $('.unhide-footer').click(function () {
+              clickCount++;
+              if (clickCount === 3) {
+                $('.reveal-icon').slideDown();
+              }
+            });
+          });
       </script>
     {% endblock %}
   </body>
