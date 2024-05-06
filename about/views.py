@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import About, Education, Work_experience, Interest
-
+from django.contrib.auth.decorators import login_required
 from .forms import AboutForm, EducationForm, Work_experienceForm, InterestForm
 
 
@@ -22,9 +22,11 @@ def about(request):
    return render(request, 'about/about.html', context)
 
 
+@login_required
 def edit_about(request, about_id):
    """A view to edit the About section"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    about = get_object_or_404(About, pk=about_id)
    if request.method == 'POST':
       form = AboutForm(request.POST, request.FILES, instance=about)
@@ -43,9 +45,11 @@ def edit_about(request, about_id):
    return render(request, template, context)
 
 
+@login_required
 def add_education(request):
    """A view to add to the Education section"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    if request.method == 'POST':
       form = EducationForm(request.POST, request.FILES)
       if form.is_valid():
@@ -63,9 +67,11 @@ def add_education(request):
    return render(request, template, context)
 
 
+@login_required
 def edit_education(request, education_id):
    """A view to edit Education entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    education = get_object_or_404(Education, pk=education_id)
    if request.method == 'POST':
       form = EducationForm(request.POST, request.FILES, instance=education)
@@ -83,16 +89,22 @@ def edit_education(request, education_id):
 
    return render(request, template, context)
 
-   
+
+@login_required   
 def delete_education(request, education_id):
    """A view to delete Education entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    education = get_object_or_404(Education, pk=education_id)
    education.delete()
    return redirect(reverse('about'))
 
 
+@login_required
 def add_work(request):
+   """A view to add Work Experience entries"""
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    if request.method == 'POST':
       form = Work_experienceForm(request.POST, request.FILES)
       if form.is_valid():
@@ -109,9 +121,11 @@ def add_work(request):
    return render(request, template, context)
 
 
+@login_required
 def edit_work(request, work_id):
    """A view to edit Work experience entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    work = get_object_or_404(Work_experience, pk=work_id)
    if request.method == 'POST':
       form = Work_experienceForm(request.POST, request.FILES, instance=work)
@@ -130,17 +144,21 @@ def edit_work(request, work_id):
    return render(request, template, context)
 
 
+@login_required
 def delete_work(request, work_id):
    """A view to delete a Work Experience entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    work = get_object_or_404(Work_experience, pk=work_id)
    work.delete()
    return redirect(reverse('about'))
 
 
+@login_required
 def add_interest(request):
    """A view to add to the Interest section"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    if request.method == 'POST':
       form = InterestForm(request.POST, request.FILES)
       if form.is_valid():
@@ -158,9 +176,11 @@ def add_interest(request):
    return render(request, template, context)
 
 
+@login_required
 def edit_interest(request, interest_id):
    """A view to edit Interest entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    interest = get_object_or_404(Interest, pk=interest_id)
    if request.method == 'POST':
       form = InterestForm(request.POST, request.FILES, instance=interest)
@@ -181,7 +201,8 @@ def edit_interest(request, interest_id):
 
 def delete_interest(request, interest_id):
    """A view to delete Interest entries"""
-
+   if not request.user.is_superuser:
+        return redirect(reverse('home'))
    interest = get_object_or_404(Interest, pk=interest_id)
    interest.delete()
    return redirect(reverse('about'))

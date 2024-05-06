@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Portfolio
 from .forms import PortfolioForm
 
@@ -15,15 +17,16 @@ def portfolio(request):
     return render(request, template, context)
 
 
+@login_required
 def add_portfolio(request):
     """A view to render the add Portfolio page"""
-
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
     if request.method == 'POST':
-      form = PortfolioForm(request.POST, request.FILES)
-      if form.is_valid():
-         form.save()
-         return redirect(reverse('portfolio'))
-   
+        form = PortfolioForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('portfolio'))
     else:
       form = PortfolioForm()
 
@@ -35,9 +38,11 @@ def add_portfolio(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_portfolio(request, portfolio_id):
     """A view to render the edit Portfolio page"""
-
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
     portfolio = get_object_or_404(Portfolio, pk=portfolio_id)
     if request.method == 'POST':
         form = PortfolioForm(request.POST, request.FILES, instance=portfolio)
@@ -57,9 +62,11 @@ def edit_portfolio(request, portfolio_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_portfolio(request, portfolio_id):
-   """A view to delete Education entries"""
-
-   portfolio = get_object_or_404(Portfolio, pk=portfolio_id)
-   portfolio.delete()
-   return redirect(reverse('about'))
+    """A view to delete Education entries"""
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+    portfolio = get_object_or_404(Portfolio, pk=portfolio_id)
+    portfolio.delete()
+    return redirect(reverse('about'))

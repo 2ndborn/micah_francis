@@ -29,9 +29,15 @@
                             <p>Technologies used to build : {{ port.technologies }} <a href="">{{ port.web_address}}</a></p>
                         </div>
                         <div class="col-12 col-lg-5 col-md-6 my-auto">
-                            <div>
-                                <img class="img-fluid img-thumbnail" src="{{ port.image.url }}" alt="">
-                            </div>
+                            {% if port.image %}
+                                <div>
+                                    <img class="img-fluid img-thumbnail" src="{{ port.image.url }}" alt="">
+                                </div>
+                            {% else %}
+                                <div>
+                                    <img class="img-fluid img-thumbnail mx-auto" src="{{ MEDIA.URL }}" alt="{{ port.description}}">
+                                </div>
+                            {% endif %}
                         </div>
                         <div class="row my-3">
                             <div class="col-12 text-center">
