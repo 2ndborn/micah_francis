@@ -76,7 +76,7 @@ body {
 .message-container {
     position: fixed;
     top: 112px;
-    right: 80px;
+    right: 7px;
     z-index: 99999;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -88,6 +88,10 @@ body {
 
 .custom-toast {
     overflow: visible;
+}
+
+.alert-container {
+    padding-right: 16px;
 }
 /*************about***************************/
 
