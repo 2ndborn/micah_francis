@@ -50,7 +50,6 @@ INSTALLED_APPS = [
 
     # Others
     'crispy_forms',
-    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -65,9 +64,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'micah_francis.urls'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -120,17 +117,16 @@ WSGI_APPLICATION = 'micah_francis.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+DATABASES = {
+    'default': dj_database_url.parse('postgres://tfdurytu:z6L1Fot-ISBbtNwesohTPSa5moEcE8bd@tai.db.elephantsql.com/tfdurytu')
+}
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 
 # Password validation
