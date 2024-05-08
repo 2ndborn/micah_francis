@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 
 def contact(request):
    """A view to render the contact page"""
-
+   
    if request.method == 'POST':
       name = request.POST['name']
       subject = request.POST['subject']
@@ -18,10 +18,15 @@ def contact(request):
          subject,
          message,
          email,
-         ['reubcode@yahoo.com'],
+         ['micah.francis69@googlemail.com'],
+         fail_silently=False,
       )
       
-      return render(request,'contact/contact.html', {'name': name})
+      template = 'contact/contact.html'
+      context = {
+         'name': name
+      }
+      return render(request,'contact/contact.html', context)
    
    else:
      return render(request, 'contact/contact.html')
