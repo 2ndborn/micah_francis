@@ -3,6 +3,7 @@ from .models import Contact
 from .forms import ContactForm
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.conf import settings
 
 
 def contact(request):
@@ -31,5 +32,6 @@ def contact(request):
       }
       return render(request, template, context)
    else:
-      messages.error(request, 'There was an error with your form.')
-      return render(request, 'contact/contact.html', {'contact': ContactForm()})
+      if request.method == 'POST':
+         messages.error(request, 'There was an error with your form.')
+         return render(request, 'contact/contact.html', {'contact': ContactForm()})
