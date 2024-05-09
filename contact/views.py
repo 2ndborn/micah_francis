@@ -23,7 +23,7 @@ def contact(request):
          recipient_list,
          fail_silently=False,
       )
-      messages.success(request, 'Your message has been sent!')
+      messages.success(request, f'Thank you {name}, Your message has been sent!')
       return redirect('contact')  # Redirect to a success page
 
    # This handles both GET requests and POST requests where the form is not valid
