@@ -34,4 +34,4 @@ def contact(request):
    
    else:
       messages.error(request, 'There was an error.')
-      return render(request, 'contact/contact.html' 'contact': contact)
+      return render(request, 'contact/contact.html', {'contact': contact})
