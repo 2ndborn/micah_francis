@@ -5,7 +5,7 @@ from .models import Contact
 class ContactForm(forms.ModelForm):
     
     class Meta:
-        models = Contact
+        model = Contact
         fields = [
             'subject',
             'message',

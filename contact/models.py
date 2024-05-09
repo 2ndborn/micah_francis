@@ -8,4 +8,4 @@ class Contact(models.Model):
     email = models.EmailField(max_length=100, null=False, blank=False)
 
     def __str__(self):
-        return self.subjects
+        return self.subject
