@@ -35,6 +35,8 @@ class Work_experienceAdmin(admin.ModelAdmin):
         'achievement3',
     )
 
+    ordering = ('from_date',)
+
 
 class InterestAdmin(admin.ModelAdmin):
     list_display = (

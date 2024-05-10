@@ -42,16 +42,19 @@
                             <div class="col-12 text-center">
                                 {% if request.user.is_authenticated %}
                                     <a href="{% url 'edit_about' a.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                    <a href="{% url 'delete_about' a.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
                                 {% endif %}
                             </div>
                         </div>
                     {% endfor %}
                 </div>
+                {% if not about.content == None or not about.image == None %}
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
-                        <a href="" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                        <a href="{% url 'add_about' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
                     </div>
                 </div>
+                {% endif %}
             </div>
             <div class="container mb-5 border-bottoms">
                 <h1 class="mb-5 text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"

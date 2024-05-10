@@ -9,8 +9,8 @@ def about(request):
    """A view to render the about me page"""
 
    about = About.objects.all()
-   education = Education.objects.all()
-   work_experience = Work_experience.objects.all()
+   education = Education.objects.all().order_by('-from_date')
+   work_experience = Work_experience.objects.all().order_by('-from_date')
    interests = Interest.objects.all()
 
    context = {
@@ -21,6 +21,32 @@ def about(request):
    }
 
    return render(request, 'about/about.html', context)
+
+
+@login_required
+def add_about(request):
+   """A view to add executive summary section"""
+   if not request.user.is_superuser:
+      messages.error(request, 'Sorry, you are not authorised to view this page')
+      return redirect(reverse('home'))
+   if request.method == 'POST':
+      form = AboutForm(request.POST, request.FILES)
+      if form.is_valid():
+         form.save()
+         messages.success(request, 'About added!')
+         return redirect(reverse('about'))
+      else:
+         messages.error(request, 'Failed to add Executieve Summary. Please ensure the form is valid.')
+   
+   else:
+      form = AboutForm()
+
+   template = 'about/add_about.html'
+   context = {
+      'form': form,
+   }
+
+   return render(request, template, context)
 
 
 @login_required
@@ -48,6 +74,18 @@ def edit_about(request, about_id):
    }
 
    return render(request, template, context)
+
+
+@login_required   
+def delete_about(request, about_id):
+   """A view to delete Executive Summary entries"""
+   if not request.user.is_superuser:
+      messages.error(request, 'Sorry, you are not authorised to view this page')
+      return redirect(reverse('home'))
+   about = get_object_or_404(About, pk=about_id)
+   about.delete()
+   messages.success(request, 'Executive Summary deleted!')
+   return redirect(reverse('about'))
 
 
 @login_required
