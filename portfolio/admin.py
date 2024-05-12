@@ -9,7 +9,6 @@ class PortfolioAdmin(admin.ModelAdmin):
         'description',
         'technologies',
         'web_address',
-        'github',
         'image',
     )
 

@@ -11,7 +11,7 @@ class PortfolioForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(PortfolioForm, self).__init__(*args, **kwargs)
 
-        port_fields = ['title', 'description', 'technologies', 'web_address', 'github', 'image']
+        port_fields = ['title', 'description', 'technologies', 'web_address', 'image']
 
         for port in port_fields:
             self.fields[port].widget.attrs.update({'class': 'my-3'})
