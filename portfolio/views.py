@@ -7,7 +7,7 @@ from .forms import PortfolioForm
 def portfolio(request):
     """A view to render the Portfolio page"""
 
-    portfolio = Portfolio.objects.all()
+    portfolio = Portfolio.objects.all().order_by('-id')
 
     template = 'portfolio/portfolio.html'
     context = {
