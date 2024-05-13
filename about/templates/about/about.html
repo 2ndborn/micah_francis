@@ -51,7 +51,7 @@
                 {% if not about.content == None or not about.image == None %}
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
-                        <a href="{% url 'add_about' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                        <a href="{% url 'add_about' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add <i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
                 {% endif %}
@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         {% if request.user.is_authenticated %}
-                            <a href="{% url 'add_education' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                            <a href="{% url 'add_education' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add <i class="fa-solid fa-plus"></i></a>
                         {% endif %}
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         {% if request.user.is_authenticated %}
-                            <a href="{% url 'add_work' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                            <a href="{% url 'add_work' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add <i class="fa-solid fa-plus"></i></a>
                         {% endif %}
                         </div>
                 </div>
@@ -204,7 +204,7 @@
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         {% if request.user.is_authenticated %}
-                            <a href="{% url 'add_interest' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add</a>
+                            <a href="{% url 'add_interest' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add <i class="fa-solid fa-plus"></i></a>
                         {% endif %}
                     </div>
                 </div>

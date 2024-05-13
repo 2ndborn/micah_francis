@@ -80,13 +80,13 @@
             <div class="row">
                 <div class="col-12 add-btn mb-2">
                     {% if request.user.is_authenticated %}
-                        <a href="{% url 'add_portfolio' %}" class="btn btn-primary text-decoration-none mb-5">Add to Portfolio</a>
+                        <a href="{% url 'add_portfolio' %}" class="btn btn-primary text-decoration-none mb-5">Add to Portfolio <i class="fa-solid fa-plus"></i></a>
                     {% endif %}
                 </div>
             </div>
             <div class="row text-center mt-3">
                 <div class="col-12 mb-2">
-                    <a href="{% url 'contact' %}" class="btn btn-primary text-decoration-none mb-5">Contact <i class="fa-solid fa-angles-right"></i></a>
+                    <a href="{% url 'contact' %}" class="btn btn-primary text-decoration-none mb-5">Contact Me <i class="fa-solid fa-angles-right"></i></a>
                 </div>
             </div>
         </div>
