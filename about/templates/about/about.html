@@ -48,13 +48,11 @@
                         </div>
                     {% endfor %}
                 </div>
-                {% if not about.content == None or not about.image == None %}
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         <a href="{% url 'add_about' %}" class="btn-sm btn-primary text-decoration-none mb-5">Add <i class="fa-solid fa-plus"></i></a>
                     </div>
                 </div>
-                {% endif %}
             </div>
             <div class="container mb-5 border-bottoms">
                 <h1 class="mb-5 text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
