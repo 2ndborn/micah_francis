@@ -75,4 +75,5 @@ def delete_portfolio(request, portfolio_id):
         return redirect(reverse('home'))
     portfolio = get_object_or_404(Portfolio, pk=portfolio_id)
     portfolio.delete()
-    return redirect(reverse('about'))
+    messages.success(request, 'Project deleted!')
+    return redirect(reverse('portfolio'))
