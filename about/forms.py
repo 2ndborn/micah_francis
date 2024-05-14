@@ -25,7 +25,7 @@ class EducationForm(forms.ModelForm):
             self.fields[ed].widget.attrs.update({'class': 'my-3'})
 
     from_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
-    to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+    to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}), required=False)
 
 
 class Work_experienceForm(forms.ModelForm):
@@ -51,7 +51,7 @@ class Work_experienceForm(forms.ModelForm):
             self.fields[work].widget.attrs.update({'class': 'my-3'})
 
     from_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
-    to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+    to_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}), required=False)
 
 
 class InterestForm(forms.ModelForm):
