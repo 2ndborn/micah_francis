@@ -60,36 +60,36 @@
             <div class="container mb-5 border-bottoms">
                 <h1 class="mb-5 text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                     aria-controls="collapseOne">Education</h1>
+                <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
                     {% for e in education %}
-                    <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="col-12 col-lg-2 mx-auto mb-2">
-                            <h5>{{ e.from_date|date:"M y" }} - 
-                                {% if e.to_date %}
-                                    {{ e.to_date|date:"M y" }}
-                                {% else %}
-                                    To date
-                                {% endif %}
-                            </h5>
-                        </div>
-                        <div class="col-12 col-lg-4 mx-auto mb-2">
-                            <h5>{{ e.institution }}</h5>
-                        </div>
-                        <div class="col-12 col-lg-4 mx-auto mb-2">
-                            <h5>{{ e.qualification}}</h5>
-                        </div>
-                        <div class="col-12 col-lg-2 mx-auto mb-2">
-                            <h5>{{ e.location }}</h5>
-                        </div>
-                        <div class="row my-3">
-                            <div class="col-12 text-center">
-                                {% if request.user.is_authenticated %}
-                                    <a href="{% url 'edit_education' e.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
-                                    <a href="{% url 'delete_education' e.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
-                                {% endif %}
-                            </div>
+                    <div class="col-12 col-lg-2 mx-auto mb-2">
+                        <h5>{{ e.from_date|date:"M y" }} - 
+                            {% if e.to_date %}
+                                {{ e.to_date|date:"M y" }}
+                            {% else %}
+                                To date
+                            {% endif %}
+                        </h5>
+                    </div>
+                    <div class="col-12 col-lg-4 mx-auto mb-2">
+                        <h5>{{ e.institution }}</h5>
+                    </div>
+                    <div class="col-12 col-lg-4 mx-auto mb-2">
+                        <h5>{{ e.qualification}}</h5>
+                    </div>
+                    <div class="col-12 col-lg-2 mx-auto mb-2">
+                        <h5>{{ e.location }}</h5>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-12 text-center">
+                            {% if request.user.is_authenticated %}
+                                <a href="{% url 'edit_education' e.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                                <a href="{% url 'delete_education' e.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}
+                </div>
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
                         {% if request.user.is_authenticated %}
@@ -180,14 +180,14 @@
                             {% endif %}
                         </ul>
                     </div>
-                    {% if request.user.is_authenticated %}
-                        <div class="row">
-                            <div class="col-12 text-center">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                                {% if request.user.is_authenticated %}
                                 <a href="{% url 'edit_work' work.id %}"  class="btn-sm btn-success text-decoration-none">Edit</a>
                                 <a href="{% url 'delete_work' work.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+                                {% endif %}
                             </div>
                         </div>
-                    {% endif %}
                     {% endfor %}
                 </div>
                 <div class="row">
