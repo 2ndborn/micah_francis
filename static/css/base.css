@@ -110,10 +110,6 @@ body {
     text-align: justify;
   }
 
-  .about-container {
-    margin: 146px 0;
-  }
-
   .timeline {
     border-left: 2px solid #013163;
     position: relative;
@@ -186,7 +182,6 @@ footer {
     display: none;
 }
 
-
 /****************************Home**********************************/
 
 .title-container {
@@ -253,9 +248,5 @@ footer {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 104px;
-    }
-
-    .about-container {
-        margin-top: 48px;
     }
 }
