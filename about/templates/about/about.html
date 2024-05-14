@@ -58,7 +58,7 @@
                 {% endif %}
             </div>
             <div class="container mb-5 border-bottoms">
-                <h1 class="mb-5 text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                <h1 class="mb-5 text-center h1-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                     aria-controls="collapseOne">Education</h1>
                 <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
                     {% for e in education %}
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="container mb-5 border-bottoms">
-                <h1 class="mb-5 text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                <h1 class="mb-5 text-center h1-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="false" aria-controls="collapseTwo">Technical Skills</h1>
                 <div id="collapseTwo" class="row collapse mb-4" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="col-12 col-lg-2 mx-auto col-md-5 tech-card">
@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="container mb-5 border-bottoms">
-                <h1 class="mb-5 text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                <h1 class="mb-5 text-center h1-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="false" aria-controls="collapseThree">Work Experience</h1>
                 <div id="collapseThree" class="row collapse mb-5 aria-labelledby="headingThree" data-parent="#accordionExample">
                     {% for work in work_experience %}
@@ -199,11 +199,11 @@
                 </div>
             </div>
             <div class="container mb-5">
-                <h1 class="mb-5 text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                <h1 class="mb-5 text-center h1-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
                     aria-expanded="false" aria-controls="collapseFour">Additional Interest/Information</h1>
                 <div id="collapseFour" class="row collapse mb-5" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    {% for interest in interests %}
                     <div class="col-12 my-auto about-content">
-                        {% for interest in interests %}
                         <ul>
                             <li>{{ interest.interest }}</li>
                         </ul>
@@ -215,8 +215,8 @@
                                 {% endif %}
                             </div>
                         </div>
-                        {% endfor %}
                     </div>
+                    {% endfor %}
                 </div>
                 <div class="row">
                     <div class="col-12 add-btn mb-2">
@@ -254,4 +254,18 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded border border-white">
+        <a class="btt-link d-flex h-100 text-decoration-none">
+            <i class="fas fa-arrow-up text-white mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script type="text/javascript">
+        $(".btt-link").click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
 {% endblock %}

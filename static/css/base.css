@@ -24,6 +24,19 @@ body {
     z-index: -1;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    background-color: #000028;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /****************************Header**********************************/
 
 .name-link {
@@ -147,6 +160,10 @@ body {
 
   .form-bg {
     background-color: #e6eefa;
+  }
+
+  .h1-btn:hover {
+    color: #0000286b;
   }
 
 /*************portfolio***************************/
