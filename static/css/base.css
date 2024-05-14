@@ -65,6 +65,10 @@ body {
     color: #000028;
 }
 
+.bg-dark-blue {
+    background-color: #000028;
+}
+
 .bg-nav {
     background: linear-gradient(to right, #6594d4 20%, rgba(255, 255, 255) 70%)
   }
