@@ -55,6 +55,23 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 ## Testing
 ### Code Validation
 ### Test Procedures
+### Device Testing
+#### 1024
+![1024](/media/1024.png)
+#### 1024
+![912](/media/912.png)
+#### 820
+![820](/media/820.png)
+#### 768
+![768](/media/768.png)
+#### 540
+![540](/media/540.png)
+#### 430
+![430](/media/430.png)
+#### 390
+![390](/media/390.png)
+#### 344
+![280](/media/344.png)
 ### Fixed Bugs 
 #### Bug 1
 I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked. ![Bug 1.1](/media/bug_1.1.jpg) ![Bug 1.2](/media/bug_1.2.jpg)
