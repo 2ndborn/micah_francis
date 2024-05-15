@@ -39,6 +39,10 @@ body {
 
 /****************************Header**********************************/
 
+.header-container {
+    padding-top: 98px;
+}
+
 .name-link {
     width: fit-content;
     font-family: "Noto Sans", sans-serif;
@@ -275,5 +279,10 @@ footer {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 104px;
+    }
+
+    
+    .con-foot {
+        margin-top: 166px;
     }
 }
