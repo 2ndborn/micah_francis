@@ -42,7 +42,7 @@ Portfolio ![Portfolio](/media/wf_portfolio.jpg)
 Contact ![Contact](/media/wf_contact.jpg)
 Owners Login ![Owners Login](/media/wf_login.jpg)
 ## Technology
-- [GitPod](https://app.codeanywhere.com/) to build the repository.
+- [GitPod](https://gitpod.io/workspaces) to build the repository.
 - [GitHub](https://github.com/Code-Institute-Org/ci-full-template) to push changes to the repository.
 - [Heroku](https://id.heroku.com/login) to deploy the application.HTML and CSS code
 - [jslint](https://www.jslint.com/) to validate JavaScript code.
@@ -57,7 +57,7 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 ### Test Procedures
 ### Fixed Bugs 
 #### Bug 1
-I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked.
+I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked. ![Bug 1.1](/media/bug_1.1.jpg) ![Bug 1.2](/media/bug_1.2.jpg)
 ### Browser Tests
 ## Deployment
 ### Gitpod
