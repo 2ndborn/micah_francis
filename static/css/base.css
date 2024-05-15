@@ -212,7 +212,7 @@ footer {
 
 .title-bg {
     background-color: rgba(255, 255, 255, 0.6);
-    margin: 15rem 0 12rem 0;
+    margin: 6rem 0 12rem 0;
 }
 
 .logo-font {
@@ -281,8 +281,18 @@ footer {
         padding-top: 104px;
     }
 
+    .title-bg {
+        margin-top: 13rem;
+    }
     
     .con-foot {
         margin-top: 166px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .title-bg {
+        margin-top: 9rem;
     }
 }
