@@ -238,6 +238,16 @@ footer {
     color: #010409;
 }
 
+.link:hover {
+    color: #5fa4ea;
+    cursor: pointer;
+}
+
+.git:hover {
+    color: #0c2e68;
+    cursor: pointer;
+}
+
 .allauth-container {
     background-color: rgba(255, 255, 255, 0.6);
     margin-top: 10rem;

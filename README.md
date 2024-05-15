@@ -1,39 +1,65 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# My Website
+## Project Goal
+The goal of the Micah Francis is to showcase the web development portfolio of Micah Francis to attract the attention of prospective employers/clients that are in need of his services.
+## User Goals
+Users should be able to view Micah Francis' Biography, Work History, Skills, Porfolio and contact information.
+## Owners Goals
+To provide potential clients and employers with the opportunity to view Micah Francis' portfolio.
+## User Stories
+### Users
+ * I want to view a welcoming home screen so that I feel enticed to find out more. ![Home screen](/media/us_home.jpg)
+ * I want to view an about me section so that I can understand what his goals and aspirations are. ![About Me screen](/media/us_about.jpg)
+ * I want to view Micah Francis' portfolio so I can evidence his skills and attributes. ![Portfolio screen](/media/us_portfolio.jpg) ![web/git](/media)
+ * I would like to view a contact form so I can contact Micah Francis. ![Contact screen](/media/us_contact.jpg)
+ * I want to know the area Micah Francis is located in so I can measure the distance he may need to travel from. ![Location](/media/us_location.jpg)
+ * I want a link to Micah Francis' social media accounts so that I can observe his activity. ![Social media links](/media/us_github.jpg) [Social media links](/media/us_linkedin.jpg)
+### Owners
+ * I want to be able to login into the site so I can amend the sites content. ![Login](/media/us_signin.jpg)
+ * I want to be able to add, update and delete the portfolio section so I ensure the site is kept up to date. ![CRUD port](/media/us_crud_portfolio.jpg)
+ * I want to be able to add, update and delete executive summary, education, work experience and additional information/interest so I can ensure the website is kept up to date. ![CRUD w,e,i](/media/us_crud_about.jpg)
+ * I want to receive an email when the contact form is completed so can response to any requests. ![email/message](/media/us_contact_test.jpg) ![email/message](/media/us_test_email.jpg)
+## Future Features
+ * The owner will be able to update the tech skills section.
+ * The owner will be able to add up to 7 achievement.
+## Typography & Colours
+**Fonts**
+ * Body text = martel-sans
+ * Name-link and title-link = Noto-sans
 
-Welcome,
+**Colours**
+* Overlay = White
+* btt-buton, main text, footer background  = #000028
+* Tech skills card = #e6f1ff
+* form background = #e6eefa
+* h1 and nav hover = #0000286b
+* sign-in, sign-out a tag = #9bf2ff
+* title page background = rgba(255, 255, 255, 0.6)
+## Wireframes
+The Template ![Template](/media/wf_template.jpg)
+Home page ![Home](/media/wf_home.jpg)
+About Me ![About Me](/media/wf_about.jpg)
+Portfolio ![Portfolio](/media/wf_portfolio.jpg)
+Contact ![Contact](/media/wf_contact.jpg)
+Owners Login ![Owners Login](/media/wf_login.jpg)
+## Technology
+- [GitPod](https://app.codeanywhere.com/) to build the repository.
+- [GitHub](https://github.com/Code-Institute-Org/ci-full-template) to push changes to the repository.
+- [Heroku](https://id.heroku.com/login) to deploy the application.HTML and CSS code
+- [jslint](https://www.jslint.com/) to validate JavaScript code.
+- [Balsamiq](https://balsamiq.com/) for creating the wireframe
+- [Font Awesome](https://fontawesome.com/v4/) for the icons
+- [Google fonts](https://fonts.google.com/) to search for the right fonts for the website
+- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)  to create forms and buttons.
+- Chrome Developer Tools for device testing.
+- Pictures of Micah Francis taken on an iPhone by Kara Francis.
+## Testing
+### Code Validation
+### Test Procedures
+### Fixed Bugs 
+#### Bug 1
+I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked.
+### Browser Tests
+## Deployment
+### Gitpod
+### Heroku
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
