@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="about-sections">
             <div class="container my-5 pb-5 border-bottoms">
                 <div class="row">
                     <h2 class="mb-5 text-center">Executive Summary</h2>
@@ -64,7 +64,7 @@
                         Education
                     </button>
                 </div>
-                <div id="collapseOne" class="row collapse show mb-4" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapseOne" class="row collapse show mb-4" data-parent="#about-sections">
                     {% for e in education %}
                     <div class="col-12 col-lg-2 mx-auto mb-2">
                         <h5>{{ e.from_date|date:"M y" }} - 
@@ -109,7 +109,7 @@
                         Technical Skills
                     </button>
                 </div>
-                <div id="collapseTwo" class="row collapse mb-4" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div id="collapseTwo" class="row collapse mb-4" data-parent="#about-sections">
                     <div class="col-12 col-lg-2 mx-auto col-md-5 tech-card">
                         <h5 class="text-center pt-3"><strong>Technologies</strong></h5>
                         <div class="container text-center py-4">
@@ -161,7 +161,7 @@
                         Work Experience
                     </button>
                 </div>
-                <div id="collapseThree" class="row collapse mb-5 aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div id="collapseThree" class="row collapse mb-5" data-parent="#about-sections">
                     {% for work in work_experience %}
                     <div class="col-12 timeline py-3 my-auto">
                         <h4>{{ work.from_date|date:"M y" }} - 
@@ -217,7 +217,7 @@
                         Education
                     </button>
                 </div>
-                <div id="collapseFour" class="row collapse mb-5" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div id="collapseFour" class="row collapse mb-5" data-parent="#about-sections">
                     {% for interest in interests %}
                     <div class="col-12 my-auto about-content">
                         <ul>
