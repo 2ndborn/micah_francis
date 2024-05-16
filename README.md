@@ -54,6 +54,36 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 - Pictures of Micah Francis taken on an iPhone by Kara Francis.
 ## Testing
 ### Code Validation
+#### HTML Home ![home](/media/html_val.home.png)
+#### HTML About![about](/media/html_val.about.png)
+#### HTML Portfolio![portfolilo](/media/html_val.portfolio.png)
+#### HTML Contact ![contact](/media/html_val.contact.png)
+### CSS![CSS](/media/val_css.png)
+### JavaScript
+#### Reveal Login Button ![contact](/media/val_js_reveal.btn.png)
+#### Back To Top Button ![contact](/media/val_js.btt.png)
+### Python
+#### Home
+###### Views.py![views](/media/p_home.views.png)
+###### Urls.py![urls](/media/p_home.urls.png)
+#### About
+###### Views.py![views](/media/p_about.views.png)
+###### Urls.py![urls](/media/p_about.urls.png)
+###### Models.py![models](/media/p_about.models.png)
+###### Forms.py![forms](/media/p_about.forms.png)
+###### Admin.py![admin](/media/p_about.admin.png)
+#### Portfolio
+###### Views.py![views](/media/p_port.views.png)
+###### Urls.py![urls](/media/p_port.urls.png)
+###### Models.py![models](/media/p_port.models.png)
+###### Forms.py![forms](/media/p_port.forms.png)
+###### Admin.py![admin](/media/p_port.admin.png)
+#### Contact
+###### Views.py![views](/media/p_contact.views.png)
+###### Urls.py![urls](/media/p_contact.urls.png)
+###### Models.py![models](/media/p_contact.models.png)
+###### Forms.py![forms](/media/p_contact.forms.png)
+###### Admin.py![admin](/media/p_contact.admin.png)
 ### Test Procedures
 ### Device Testing
 #### 1024
