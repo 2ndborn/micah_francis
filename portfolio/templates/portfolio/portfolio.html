@@ -33,7 +33,8 @@
                         <div class="col-12 col-lg-5 col-md-6 my-auto">
                             {% if port.image %}
                                 <div>
-                                    <a href="{{ port.web_address}}" target="_blank"><img class="img-fluid img-thumbnail" src="{{ port.image.url }}"></a>
+                                    <a href="{{ port.web_address}}" target="_blank"><img class="img-fluid img-thumbnail" src="{{ port.image.url }}"
+                                            alt="{{ port.image_description }}"></a>
                                 </div>
                             {% else %}
                                 <div>
@@ -52,7 +53,8 @@
                     {% else %}
                         <div class="col-12 col-lg-5 col-md-6 my-auto">
                             <div>
-                                <a href="{{ port.web_address}}" target="_blank"><img class="img-fluid img-thumbnail" src="{{ port.image.url }}"></a>
+                                <a href="{{ port.web_address}}" target="_blank"><img class="img-fluid img-thumbnail" src="{{ port.image.url }}"
+                                        alt="{{ port.image_description }}"></a>
                             </div>
                         </div>
                         <div class="col-12 col-lg-7 col-md-6 my-auto">

@@ -11,6 +11,7 @@ class PortfolioAdmin(admin.ModelAdmin):
         'web_address',
         'github',
         'image',
+        'image_description',
     )
 
 admin.site.register(Portfolio, PortfolioAdmin)
