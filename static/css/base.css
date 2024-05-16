@@ -267,7 +267,7 @@ footer {
     }
 
     .title-bg {
-        margin: 0 0 0 0;
+        margin: 0;
     }
 
     .allauth-container {
@@ -280,19 +280,8 @@ footer {
     .header-container {
         padding-top: 104px;
     }
-
-    .title-bg {
-        margin-top: 13rem;
-    }
     
     .con-foot {
         margin-top: 166px;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .title-bg {
-        margin-top: 9rem;
     }
 }
