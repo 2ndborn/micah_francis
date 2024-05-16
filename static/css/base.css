@@ -47,7 +47,6 @@ body {
     width: fit-content;
     font-family: "Noto Sans", sans-serif;
     color: #000028;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings:
@@ -58,7 +57,6 @@ body {
     width: fit-content;
     font-family: "Noto Sans", sans-serif;
     color: #000028;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings:
@@ -67,7 +65,6 @@ body {
 
 .nav-area {
     font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings:
@@ -100,7 +97,6 @@ body {
     right: 7px;
     z-index: 99999;
     font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     font-variation-settings:
@@ -114,6 +110,86 @@ body {
 .alert-container {
     padding-right: 16px;
 }
+
+/*************Footer***************************/
+
+footer {
+    background-color: #000028;
+    text-align: right;
+}
+
+.footer-content {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.in-out-icon {
+    margin: 5px 10px 5px 0;
+}
+
+.sign-in a {
+    color: #9bf2ff;
+}
+
+.reveal-icon {
+    display: none;
+}
+
+/****************************Home**********************************/
+
+.title-container {
+    margin-top: 5%;
+    padding-left: 25px;
+}
+
+.title-bg {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 6rem 0 12rem 0;
+}
+
+.logo-font {
+    font-family: "Noto Sans", sans-serif;
+    color: #000028;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.btn-dark-blue {
+    background: #000028;
+    color: white;
+}
+
+.social-icons {
+    font-size: 6rem;
+}
+
+.link {
+    color: #0955a1;
+}
+
+.git {
+    color: #010409;
+}
+
+.link:hover {
+    color: #5fa4ea;
+    cursor: pointer;
+}
+
+.git:hover {
+    color: #0c2e68;
+    cursor: pointer;
+}
+
+.allauth-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 10rem;
+    padding: 30px;
+    border-radius: 5px;
+}
+
 /*************about***************************/
 
   .profile-image {
@@ -176,87 +252,6 @@ body {
     background-size: contain;
     width: 80%;
     height: 250px;
-}
-
-
-/*************Footer***************************/
-
-footer {
-    background-color: #000028;
-    text-align: right;
-}
-
-.footer-content {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.in-out-icon {
-    margin: 5px 10px 5px 0;
-}
-
-.sign-in a {
-    color: #9bf2ff;
-}
-
-.reveal-icon {
-    display: none;
-}
-
-/****************************Home**********************************/
-
-.title-container {
-    margin-top: 5%;
-    padding-left: 25px;
-}
-
-.title-bg {
-    background-color: rgba(255, 255, 255, 0.6);
-    margin: 6rem 0 12rem 0;
-}
-
-.logo-font {
-    font-family: "Noto Sans", sans-serif;
-    color: #000028;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
-
-.btn-dark-blue {
-    background: #000028;
-    color: white;
-}
-
-.social-icons {
-    font-size: 6rem;
-}
-
-.link {
-    color: #0955a1;
-}
-
-.git {
-    color: #010409;
-}
-
-.link:hover {
-    color: #5fa4ea;
-    cursor: pointer;
-}
-
-.git:hover {
-    color: #0c2e68;
-    cursor: pointer;
-}
-
-.allauth-container {
-    background-color: rgba(255, 255, 255, 0.6);
-    margin-top: 10rem;
-    padding: 30px;
-    border-radius: 5px;
 }
 
 /****************************Media Queries**********************************/

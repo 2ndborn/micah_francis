@@ -129,16 +129,17 @@
     {% block postloadjs %}
       <script type="text/javascript">
         $(document).ready(function () {
-          clickCount = 0;
-            $('.unhide-footer').click(function () {
-              clickCount++;
+            let clickCount = 0; // Declare clickCount inside the ready function
+
+            $(".unhide-footer").click(function () {
+              clickCount += 1;
               if (clickCount === 3) {
-                $('.reveal-icon').slideDown();
+                $(".reveal-icon").slideDown();
               }
             });
           });
 
-          $('.alert').alert('show')
+          $(".alert").alert("show");
       </script>
     {% endblock %}
   </body>
