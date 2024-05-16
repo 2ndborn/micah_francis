@@ -76,6 +76,26 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 #### Bug 1
 I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked. ![Bug 1.1](/media/bug_1.1.jpg) ![Bug 1.2](/media/bug_1.2.jpg)
 ### Browser Tests
+#### Chrome
+##### Home ![Home](/media/chrome_home.png)
+##### About ![About](/media/chrome_about.png)
+##### Portfolio ![Portfolio](/media/chrome_portfolio.png)
+##### Contact ![Contact](/media/chrome_contact.png)
+#### Edge
+##### Home ![Home](/media/edge_home.png)
+##### About ![About](/media/edge_about.png)
+##### Portfolio ![Portfolio](/media/edge_portfolio.png)
+##### Contact ![Contact](/media/edge_contact.png)
+#### FireFox
+##### Home ![Home](/media/ff_home.png)
+##### About ![About](/media/ff_about.png)
+##### Portfolio ![Portfolio](/media/ff_portfolio.png)
+##### Contact ![Contact](/media/ff_contact.png)
+#### Opera
+##### Home ![Home](/media/op_home.png)
+##### About ![About](/media/op_about.png)
+##### Portfolio ![Portfolio](/media/op_portfolio.png)
+##### Contact ![Contact](/media/op_contact.png)
 ## Deployment
 ### Gitpod
 ### Heroku
