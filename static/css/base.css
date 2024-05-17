@@ -261,6 +261,30 @@ footer {
     height: 250px;
 }
 
+.git-btn {
+    background-color: #000028;
+    color: #fff;
+    text-decoration: none;
+}
+
+.git-btn:hover {
+    background-color: #fff;
+    color: #000028;
+    border: 2px solid #000028;
+}
+
+.web-btn {
+    background-color: #0337a8;
+    color: #fff;
+    text-decoration: none;
+}
+
+.web-btn:hover {
+    background-color: #fff;
+    color: #0337a8;
+    border: 2px solid #0337a8;
+}
+
 /****************************Media Queries**********************************/
 
 @media (min-width: 1200px) {

@@ -50,6 +50,7 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 - [Font Awesome](https://fontawesome.com/v4/) for the icons
 - [Google fonts](https://fonts.google.com/) to search for the right fonts for the website
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)  to create forms and buttons.
+- ![Contact pages in Django](https://youtu.be/w4ilq6Zk-08?si=Qc10_VHxdwH2RI-d) guide to creating the contact page
 - Chrome Developer Tools for device testing.
 - Pictures of Micah Francis taken on an iPhone by Kara Francis.
 ## Testing
