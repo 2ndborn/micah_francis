@@ -85,6 +85,128 @@ Owners Login ![Owners Login](/media/wf_login.jpg)
 ###### Forms.py![forms](/media/p_contact.forms.png)
 ###### Admin.py![admin](/media/p_contact.admin.png)
 ### Test Procedures
+#### Navigation
+When the logo is selected on the Home page does it refresh the Home page?
+*The Home page is refreshed when the logo is selected on the home page* 
+
+When the logo is selected on the About Me, Portfolio or Contact Me pages does it render the Home page?
+*The Home page is rendered when the logo is selected from the About Me, Portfolio or Contact Me page*
+
+When the Home button is selected does it render the Home page?
+*The home page is rendered when the Home button is selected*
+
+When the About Me button is selected does it render the About Me page?
+*The About Me page is rendered when the About Me button is selected*
+
+When the Portfolio button is selected does it render the Portfolio page?
+*The Portfolio page is rendered when the Portfolio button is selected*
+
+When the Contact Me button is selected does it render the Contact Me page?
+*The Contact Me page is rendered when the Contact Me button is selected*
+#### Home Page
+When the LinkedIn/GitHub icons are selected does it render a new window with the owners LinkedIn/GitHub profiles?
+*A new window with the owners LinkedIn/GitHub profiles are rendered when the LinkedIn/GitHub icons are selected*
+
+When the learn more button is selected does it render the About Me page?
+*The About Me page is rendered when the learn more button is selected*
+
+When "Micah Francis" is clicked 3 times on the Home page, is the footer with the padlock sign-in icon revealed?
+*The footer with the padlock icon is revealed when "Micah Francis" on the Home page is clicked 3 times*
+
+#### About Me Page
+When the Education, Techical Skills, Work Experience and Interests headers are selected does  it reveal hidden content?
+*Hidden content is revealed when the Education, Techical Skills, Work Experience and Interests headers are selected*
+
+When the Portfolio button is selected does is render the Portfolio page?
+*The Portfolio page is rendered when the Portfolio button is selected*
+
+#### Portfolio Page
+When the website link is selected does it render a new window with the website?
+*A new window with the website is rendered when the website link is selected*
+
+When the GitHub link is selected does it render a new window with the GitHub site?
+*A new window with the GitHub site is rendered when the GitHub link is selected*
+
+When the website image is selected does it render a new window with the website?
+*A new window with the website is rendered when the website image is selected*
+
+When the Contact Me button is selected does it render the Contact Me page?
+*The Contact Me page is rendered when the Contact Me button is selected*
+
+#### Contact Me
+When the contact me form is submitted does the user receive the message "Your message has been sent"?
+*The user received the message "Your message has been sent" when the contact form has been submitted*
+
+When the contact me form is submitted does the owner receive the message is their inbox?
+*The owner receives the message is their inbox when the user submits the contact me form*
+
+#### Owners Options
+##### Sign-in/Sign-out/Forgotten Password
+When the padlock icon on the footer is selected does it render the sign-in page?
+*The sign-in page is rendered when the padlock icon on the footer is selected*
+
+When the owner signs in does the owner receive the message "Successfully signed in as 'owners name'"?
+*The owner receives the message "Successfully signed in as 'owners name'"is when the owner signs in*
+
+When the unlocked padlock icon on the footer is selected does it render the sign out page?
+*The sign out page is rendered when the unlocked  padlock icon on the footer is selected*
+
+When the owner signs out does the owner receive the message "Successfully signed out"?
+*The owner receives the message "Successfully signed out" when the owner signs out*
+
+When the forgotten password link is selected does the owner receive the message is their inbox to reset their password?
+*The owner receives the message is their inbox to reset their password when the forgotten password link is selected*
+
+##### About Me
+When the About Me page is rendered and there are no entries does it display edit and delete and add buttons?
+*The edit and delete buttons are not visible when the About Me page is rendered without any entries but the add buttons are*
+
+When an add form is submitted does it display the message "Executive Summary/Education/Work Experience/Interests added"
+*The message "Executive Summary/Education/Work Experience/Interests added" is displayed when an add form is submitted*
+
+When the About Me page is rendered with entries are the edit and delete buttons visible?
+*The edit and delete buttons are visible for each entry when the About Me page is rendered*
+
+When the Executive Summary has an entry is the add button hidden?
+*The add button is not visible when the Executive Summary has an entry* 
+
+When the add Executive Summary/Education/Work Experience/Interests form button is selected on the About Me page does is render the add Executive Summary/Education/Work Experience/Interests form?
+*The add Executive Summary/Education/Work Experience/Interests form is rendered when the add button is selected* 
+
+When an add form is submitted does it display the message "Executive Summary/Education/Work Experience/Interests added"
+*The message "Executive Summary/Education/Work Experience/Interests added" is displayed when an add form is submitted*
+
+When the edit Executive Summary/Education/Work Experience/Interests form button is selected on the About Me page does is render the Edit Executive Summary/Education/Work Experience/Interests form?
+*The edit Executive Summary/Education/Work Experience/Interests form is rendered when the Edit buttons is selected*
+
+When an edit form is submitted does it display the message "Executive Summary/Education/Work Experience/Interests updated"
+*The message "Executive Summary/Education/Work Experience/Interests updated" is displayed when an edit form is submitted*
+
+When the delete Executive Summary/Education/Work Experience/Interests form button is selected on the About Me page does it delete Executive Summary/Education/Work Experience/Interests entry?
+*The Executive Summary/Education/Work Experience/Interests entry is deleted when the delete buttons is selected*
+
+When the delete button is selected does it display the message "Executive Summary/Education/Work Experience/Interests deleted"
+*The message "Executive Summary/Education/Work Experience/Interests deleted" is displayed when an delete button is selected*
+
+##### Portfolio
+When the add Portfolio button is selected on the Portfolio page does is render the add Portfolio form?
+*The add Portfolio form is rendered when the add Portfolio buttons is selected* 
+
+When the add Portfolio form is submitted does it display the message "Portfolio added"
+*The message "Portfolio added" is displayed when the add Portfolio form is submitted*
+
+When the Edit Portfolio form button is selected on the Portfolio page does is render the Edit Portfolio form?
+*The Edit Portfolio form is rendered when the Edit Portfolio buttons is selected*
+
+When the edit Portfolio form is submitted does it display the message "Portfolio updated"
+*The message "Portfolio updated" is displayed when the edit Portfolio form is submitted*
+
+When the delete Portfolio is selected on the Portfolio page does it delete Portfolio entry?
+*The Portfolio entry is deleted when the delete Portfolio buttons is selected*
+
+When the delete button is selected does it display the message "Portfolio deleted"
+*The message "Portfolio deleted" is displayed when the Portfolio delete button is selected*
+
 ### Device Testing
 #### 1024
 ![1024](/media/1024.png)
