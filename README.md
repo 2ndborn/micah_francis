@@ -250,5 +250,27 @@ I wanted to make a change to the portfolio model as I felt it necessary to inclu
 ##### Contact ![Contact](/media/op_contact.png)
 ## Deployment
 ### Gitpod
+1. Go to [https://gitpod.io/](https://gitpod.io/)
+ 2. In the Workspaces section click on “https://gitpod.io/start/#2ndborn-micahfrancis-hhjghrrn4qgj”. 
+![Workspace](/media/gitpod_workspace.png)
+ 3. Once the page is loaded open a new terminal and type “python3 manage.py runserver”. Then press Enter.
+![Terminal](/media/gitpod_terminal.png)
+ 4. Options to open the preview page or the browser will be shown. Click on the browser.
+![Port Options](/media/gitpod_brow.options.png)
+ 5. The browser will open.
+![webpage](/media/gitpod_website.png)
 ### Heroku
-
+1. Go to [Heroku.com ](https://id.heroku.com/login)
+![heroku_webpage](/media/hero0.jpg)
+2. From the home page find the application "micah-francis" and click on it.
+![heroku_homepage](/media/hero_dash.png)
+3.	Click on the deploy tab.
+![deploy_tab](/media/hero_deploy.png)
+4. Scroll down to deployment method, click on GitHub, search for your repository profile, key in the name of the repository and then press search. ![heroku_install](/media/hero_github.png)
+5. Once the repository has been found click on connect. This will initially the install process.![heroku_install](/media/hero_connect.png)
+6. Once installation has been completed, press enable automatic deploy.
+![heroku_enable](/media/hero_auto.png)
+7. Press deploy.
+![heroku_press_deloy](/media/hero6.jpg)
+8. Finally, click on the Open App button at the top of the page.
+![heroku_open_app](/media/hero7.jpg)
