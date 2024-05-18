@@ -39,6 +39,8 @@ class Work_experience(models.Model):
     achievement1 = models.TextField(max_length=500, null=True, blank=False)    
     achievement2 = models.TextField(max_length=500, blank=True, null=True)
     achievement3 = models.TextField(max_length=500, blank=True, null=True)
+    achievement4 = models.TextField(max_length=500, blank=True, null=True)
+    achievement5 = models.TextField(max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.job_title

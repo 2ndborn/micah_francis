@@ -44,7 +44,9 @@ class Work_experienceForm(forms.ModelForm):
             'location',
             'achievement1',                
             'achievement2',
-            'achievement3'
+            'achievement3',
+            'achievement4',
+            'achievement5'
         ]
 
         for work in work_fields:

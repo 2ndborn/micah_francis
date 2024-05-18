@@ -33,6 +33,8 @@ class Work_experienceAdmin(admin.ModelAdmin):
         'achievement1',
         'achievement2',
         'achievement3',
+        'achievement4',
+        'achievement5',
     )
 
     ordering = ('from_date',)
