@@ -15,8 +15,8 @@ To provide potential clients and employers with the opportunity to view Micah Fr
  * I want a link to Micah Francis' social media accounts so that I can observe his activity. ![Social media links](/media/us_github.jpg) [Social media links](/media/us_linkedin.jpg)
 ### Owners
  * I want to be able to login into the site so I can amend the sites content. ![Login](/media/us_signin.jpg)
- * I want to be able to add, update and delete the portfolio section so I ensure the site is kept up to date. ![CRUD port](/media/us_crud_portfolio.jpg)
- * I want to be able to add, update and delete executive summary, education, work experience and additional information/interest so I can ensure the website is kept up to date. ![CRUD w,e,i](/media/us_crud_about.jpg)
+ * I want to be able to add, update and delete the portfolio section so I ensure the site is kept up to date. ![CRUD port](/media/us_crud_portfolio.jpg) ![Add/Edit port](/media/portfolio_add_edit.png)
+ * I want to be able to add, update and delete executive summary, education, work experience and additional information/interest so I can ensure the website is kept up to date. ![CRUD w,e,i](/media/us_crud_about.jpg) ![Add_about](/media/about_add.png) ![Add_edit](/media/about_edit.png)
  * I want to receive an email when the contact form is completed so can response to any requests. ![email/message](/media/us_contact_test.jpg) ![email/message](/media/us_test_email.jpg)
 ## Future Features
  * The owner will be able to update the tech skills section.
@@ -226,8 +226,10 @@ When the delete button is selected does it display the message "Portfolio delete
 #### 344
 ![280](/media/344.png)
 ### Fixed Bugs 
-#### Bug 1
-I wanted to make a change to the portfolio model as I felt it necessary to include the git hub address as well as the web address. I made the amendment and migrations, then tested it on GitPod. It worked so I deployed my changes to Heroku, or so I thought. I went on the portfolio page and got message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked. ![Bug 1.1](/media/bug_1.1.jpg) ![Bug 1.2](/media/bug_1.2.jpg)
+#### Bug 1 - Portfolio model not migrating to Heroku
+I wanted to make a change to the portfolio model as I felt it necessary to include the GitHub address as well as the web address. I made the amendments and migrations, then tested it. GitPod was successful but on Heroku I got the message "ProgrammingError at /portfolio/". I attempted to migrate my changes again changing the title of the model instance, but this did nothing. I googled "ProgrammingError at /portfolio/" and found on Stack Overflow that  I needed to migrate my changes which I had already done. Finally I typed in "ProgrammingError at /portfolio/" into Slack and found a message from a student called Tony Wilson_5p querying the same thing as me. The answer he got was that he wasn't deploying the database migrations on Heroku. So I login in to Heroku via the terminal and migrated the changes using *"heroku run python manage.py migrate --app micah-francis"* and it worked. ![Bug 1.1](/media/bug_1.1.jpg) ![Bug 1.2](/media/bug_1.2.jpg)
+#### Bug 2 - Contact Form
+After submitting the contact form I was receiving the message "SMTP.starttls() got an unexpected keyword argument 'keyfile' ". I was stumped so googled the message, which took me to Stack overflow but I didn't understand the answer. Finally I copied the error into Slack and found a was reported regarding this issue. The solution to the problem was to type "touch  runtime.txt  &&  echo "python-3.9.16" > runtime.txt" into the CLI. Once I type that it the emails started to work. ![Email debg](/media/bug2.png)
 ### Browser Tests
 #### Chrome
 ##### Home ![Home](/media/chrome_home.png)
