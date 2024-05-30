@@ -1,0 +1,26 @@
+{% for coll in collaborative %}
+    <div class="col-12 col-lg-7 col-md-6 my-auto">
+        <h2 class="mb-3">{{ coll.title }}</h2>
+        <p class="about-content">{{ coll.description }}.</p>
+        <div class="text-center my-3">
+            <span>
+                <a class="btn-sm web-btn" href="{{ coll.web_address}}" target="_blank">Website</a>
+                <a class="btn-sm git-btn" href="{{ coll.github }}" target="_blank">GitHub</a>
+            </span>
+        </div>
+    </div>
+    <div class="col-12 col-lg-5 col-md-6 my-auto">
+        <div>
+            <img class="img-fluid img-thumbnail" src="{{ coll.image.url }}" alt="">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-12 text-center">
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'edit_collaborative' coll.id %}" class="btn-sm btn-success text-decoration-none">Edit</a>
+                <a href="{% url 'delete_collaborative' coll.id %}" class="btn-sm btn-danger text-decoration-none">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    <hr class="featurette-divider">
+{% endfor %}
