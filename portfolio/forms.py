@@ -30,4 +30,4 @@ class CollaborativeForm(forms.ModelForm):
         collab_fields = ['title', 'description', 'technologies', 'web_address', 'github', 'image', 'image_description']
 
         for c in collab_fields:
-            self.fields[port].widget.attrs.update({'class': 'my-3'})
+            self.fields[c].widget.attrs.update({'class': 'my-3'})

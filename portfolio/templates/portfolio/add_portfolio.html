@@ -15,12 +15,12 @@
 <div class="container-fluid about-container text-dark-blue">
     <div class="container mb-5 pb-3 border-bottoms">
         <div class="row">
-            <h1 class="mb-5 text-center">Add Portfolio</h1>
+            <h1 class="mb-5 text-center">Add Individual Projects</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-10 offset-1 col-md-6 offset-md-3">
-            <form method="POST" action="{% url 'add_portfolio' %}" class="form form-control form-bg" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_collaborative' %}" class="form form-control form-bg" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="my-3">
                     {% for field in form %}

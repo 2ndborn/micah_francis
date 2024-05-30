@@ -83,6 +83,10 @@ body {
     background-color: #000028;
 }
 
+.border-dark-blue {
+    border-color: #000028;
+}
+
 .bg-nav {
     background: linear-gradient(to right, #6594d4 20%, rgba(255, 255, 255) 70%)
   }
@@ -283,6 +287,10 @@ footer {
     background-color: #fff;
     color: #0337a8;
     border: 2px solid #0337a8;
+}
+
+#myTab {
+    font-size: 1.5em;
 }
 
 /****************************Media Queries**********************************/
