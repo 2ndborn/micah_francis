@@ -195,11 +195,13 @@ footer {
 
 .link:hover {
     color: #5fa4ea;
+    font-size: 6.5rem;
     cursor: pointer;
 }
 
 .git:hover {
     color: #0c2e68;
+    font-size: 6.5rem;
     cursor: pointer;
 }
 
@@ -329,9 +331,5 @@ footer {
 @media (min-width: 992px) {
     .header-container {
         padding-top: 104px;
-    }
-    
-    .con-foot {
-        margin-top: 166px;
     }
 }
